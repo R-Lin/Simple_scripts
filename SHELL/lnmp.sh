@@ -204,7 +204,33 @@ eof
 
 LOCAL_IP=$(ifconfig eth0|grep -oP '(?<=inet addr:)\S+')
 SCRIPT=`pwd`
-SOFT_WARE_LIST=$(ls ${script}|grep -iP '(nginx|mysql|php|zabbix).*gz')
+select option in Nginx Mysql Php Zabbix All
+do
+    case $option in 
+        Nginx)
+            PATTERN='nginx.*gz'
+            ;;
+        Mysql)
+            PATTERN='mysql.*gz'
+            ;;
+        Php)
+            PATTERN='php.*gz'
+            ;;
+        Zabbix)
+            PATTERN='zabbix.*gz'
+            ;;
+        All)
+            PATTERN='(nginx|mysql|php|zabbix).*gz'
+            ;;
+        *) 
+            echo "Please input correct option!"
+            ;;
+    esac
+    SOFT_WARE_LIST=$(ls ${SCRIPT}|grep -iP "${PATTERN}")
+    echo $SOFT_WARE_LIST
+    break
+done
+
 yum_install
 # 检查脚本所在目录, 有无软件包: Nginx Mysql Php
 if [ -z ${SOFT_WARE_LIST} ]
