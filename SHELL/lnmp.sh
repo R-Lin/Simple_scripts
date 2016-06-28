@@ -173,16 +173,12 @@ function zabbix_install(){
         chown -R www:www /www/coolnull.com/zabbix
         ln -fs /opt/mysql/${MYSQL_NAME}/lib/libmysqlclient.so.20 /usr/lib/
         ldconfig
-        iptables -I INPUT -p tcp  --dport 10050 -j ACCEPT
-        iptables -I INPUT -p udp  --dport 10050 -j ACCEPT
     fi
     ./configure --prefix=/opt/zabbix ${ZABBIX_FLAG} --enable-proxy --enable-agent --with-mysql=/usr/local/mysql/bin/mysql_config --with-net-snmp --with-libcurl
     make && make install
     cp -f misc/init.d/fedora/core/zabbix_agentd /etc/init.d/
     sed -ri 's#(BASEDIR=).*#\1/opt/zabbix#' /etc/init.d/zabbix_agentd
     sed -ri 's/# (Timeout=).*/\120/' /opt/zabbix/etc/zabbix_agentd.conf
-    iptables -I INPUT -p tcp  --dport 10051 -j ACCEPT
-    iptables -I INPUT -p udp  --dport 10051 -j ACCEPT
     cat >> /etc/services <<'eof'
 zabbix-agent    10050/tcp                           #ZabbixAgent
 zabbix-agent    10050/udp                           #Zabbix Agent
