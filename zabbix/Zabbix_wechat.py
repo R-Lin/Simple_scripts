@@ -47,13 +47,13 @@ class Zabbix_wechat:
         """
         Get an  auth_token from API or token.txt
         """
-        if not os.path.exists(self.token_file) or os.stat(self.token_file):
-            with open(self.token_file, 'w') as f :
+        if not os.path.exists(self.token_file) or not os.stat(self.token_file).st_size:
+            with open(self.token_file, 'w') as f:
                 url = '{0[getToken]}?corpid={0[corpid]}&corpsecret={0[secret]}'.format(self.apiUrl_dic)
                 result = json.loads(requests.get(url).content)
                 f.write(result['access_token'])
                 self.apiUrl_dic['token'] = result['access_token']
-        else :
+        else:
             self.apiUrl_dic['token'] = open(self.token_file).read().strip()
         if self.apiUrl_dic.get('token'):
             self.logger.info("Authen successfully!")
