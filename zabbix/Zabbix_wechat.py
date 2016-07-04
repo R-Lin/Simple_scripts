@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+#coding:utf8
+import time
 import requests
 import os
 import json
@@ -21,9 +24,6 @@ class Mylog:
         self.logger.addHandler(stream)
 
     def log(self):
-        """
-        Return Log object
-        """
         return self.logger
 
 
@@ -47,16 +47,23 @@ class Zabbix_wechat:
         """
         Get an  auth_token from API or token.txt
         """
-        if not os.path.exists(self.token_file) or not os.stat(self.token_file).st_size:
+        control = None
+        if os.path.exists(self.token_file):
+            now_time = time.local()
+            token_stat = os.stat(self.token_file)
+            token_interval = now_time - token_stat
+            if token_stat.st_size and 0 < token_interval < 7200:    # 判断token 是否超过2小时有效期
+                self.apiUrl_dic['token'] = open(self.token_file).read().strip()
+                self.logger.info("Token_file exist, now use token of Token_file")
+                control = True
+
+        if not control:
             with open(self.token_file, 'w') as f:
                 url = '{0[getToken]}?corpid={0[corpid]}&corpsecret={0[secret]}'.format(self.apiUrl_dic)
                 result = json.loads(requests.get(url).content)
                 f.write(result['access_token'])
                 self.apiUrl_dic['token'] = result['access_token']
-        else:
-            self.apiUrl_dic['token'] = open(self.token_file).read().strip()
-        if self.apiUrl_dic.get('token'):
-            self.logger.info("Authen successfully!")
+                self.logger.info("Token_file not exist or timed out, now use token from Wechat_Api")
 
     def senMessage(self, messages):
         url = '{0[sendMess]}?access_token={0[token]}'.format(self.apiUrl_dic)
@@ -82,6 +89,7 @@ class Zabbix_wechat:
 if __name__ == '__main__':
     if len(sys.argv) == 1:
         sys.exit(3)
+
     messages = sys.argv[1]
     s = Zabbix_wechat()
     s.getToken()
