@@ -47,11 +47,11 @@ class Zabbix_wechat:
         """
         Get an  auth_token from API or token.txt
         """
-        control = None
+        control = False
         if os.path.exists(self.token_file):
-            now_time = time.local()
+            now_time = time.time()
             token_stat = os.stat(self.token_file)
-            token_interval = now_time - token_stat
+            token_interval = now_time - token_stat.st_mtime
             if token_stat.st_size and 0 < token_interval < 7200:    # 判断token 是否超过2小时有效期
                 self.apiUrl_dic['token'] = open(self.token_file).read().strip()
                 self.logger.info("Token_file exist, now use token of Token_file")
