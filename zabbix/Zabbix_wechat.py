@@ -39,8 +39,8 @@ class Zabbix_wechat:
             'token': None,
             'getToken': 'https://qyapi.weixin.qq.com/cgi-bin/gettoken',
             'sendMess': 'https://qyapi.weixin.qq.com/cgi-bin/message/send',
-            'corpid': 'wx23ef45bea127db50',
-            'secret': 'i_UZ6z9j-JXioCISF9AD928-YVfzfSmMeZL2bgtr701clccJ5oCmB-KKc99IUYfO'
+            'corpid': '项目id',
+            'secret': '加密字符串'
         }
 
     def getToken(self):
