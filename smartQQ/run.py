@@ -134,13 +134,17 @@ class SmartQQ():
                         print 133,self.groupName
                         print 134, groupid, send_uid, self.groupMember
                         print mess
-                # except TypeError:
-                #     self.log.error('TypeError: 136 lines')
-                #     print self.groupMember[groupid][send_uid]
-                # except ValueError:
-                #     print mess, 139
-                #     self.log.error('TypeError: 140 lines')
-                #     print self.url_request.post(self.url_dic['pollMessage'], data=data).text, 141
+                except TypeError as e :
+                    self.log.error(e)
+                    self.log.error('TypeError: 136 lines')
+                    # self.log.error(str(self.groupMember[groupid][send_uid]))
+                    print 140, self.groupMember[groupid][send_uid]
+
+                except ValueError as e:
+                    self.log.error(e)
+                    print mess, 139
+                    self.log.error('TypeError: 140 lines')
+                    print self.url_request.post(self.url_dic['pollMessage'], data=data).text, 141
 
     def groupInfo(self, groupid ):
         self.log.info("Enter function groupInfo")
