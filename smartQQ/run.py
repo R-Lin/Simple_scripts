@@ -22,6 +22,7 @@ class SmartQQ():
         self.groupMember = {}
         self.url_dic = {
             'qrcode': 'https://ssl.ptlogin2.qq.com/ptqrshow?appid={0}&e=0&l=L&s=8&d=72&v=4',
+            'get_online_buddies2': 'http://d1.web2.qq.com/channel/get_online_buddies2?vfwebqq={0}4&clientid={1}&psessionid={2}',
             'groupNameList': 'http://s.web2.qq.com/api/get_group_name_list_mask2',
             'groupInfo': 'http://s.web2.qq.com/api/get_group_info_ext2?gcode={0}&vfwebqq={1}&t={2}',
             'pollMessage': 'http://d1.web2.qq.com/channel/poll2',
@@ -127,18 +128,19 @@ class SmartQQ():
                     send_uid = str(messages['send_uin'])
                     print self.groupName[groupid]['name'], self.groupMember[groupid][send_uid] + ":" + words
                 except KeyError as m:
-                    self.log.error('KeyError: 131 lines')
-                    self.log.error(m)
-                    print 133,self.groupName
-                    print 134, groupid, send_uid, self.groupMember
-                    print mess
-                except TypeError:
-                    self.log.error('TypeError: 136 lines')
-                    print self.groupMember[groupid][send_uid]
-                except ValueError:
-                    print mess, 139
-                    self.log.error('TypeError: 140 lines')
-                    print self.url_request.post(self.url_dic['pollMessage'], data=data).text, 141
+                    if m.message != 'result':
+                        self.log.error('KeyError: 131 lines')
+                        self.log.error(m)
+                        print 133,self.groupName
+                        print 134, groupid, send_uid, self.groupMember
+                        print mess
+                # except TypeError:
+                #     self.log.error('TypeError: 136 lines')
+                #     print self.groupMember[groupid][send_uid]
+                # except ValueError:
+                #     print mess, 139
+                #     self.log.error('TypeError: 140 lines')
+                #     print self.url_request.post(self.url_dic['pollMessage'], data=data).text, 141
 
     def groupInfo(self, groupid ):
         self.log.info("Enter function groupInfo")
