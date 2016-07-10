@@ -35,7 +35,7 @@ def log():
     terminal_stream.setFormatter(log_format)
 
     logger.setLevel(logging.DEBUG)
-    file_stream.setLevel(logging.INFO)
+    file_stream.setLevel(logging.WARNING)
     terminal_stream.setLevel(logging.DEBUG)
 
     logger.addHandler(file_stream)
