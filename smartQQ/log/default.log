@@ -1,0 +1,630 @@
+2016-07-11 08:47:45,059 [ERROR] No JSON object could be decoded
+2016-07-11 08:47:45,061 [ERROR] TypeError: 140 lines
+2016-07-11 08:47:45,257 [ERROR] No JSON object could be decoded
+2016-07-11 08:47:45,259 [ERROR] TypeError: 140 lines
+2016-07-11 08:47:45,532 [ERROR] No JSON object could be decoded
+2016-07-11 08:47:45,532 [ERROR] TypeError: 140 lines
+2016-07-11 08:47:45,973 [ERROR] No JSON object could be decoded
+2016-07-11 08:47:45,974 [ERROR] TypeError: 140 lines
+2016-07-11 08:47:46,240 [ERROR] No JSON object could be decoded
+2016-07-11 08:47:46,240 [ERROR] TypeError: 140 lines
+2016-07-11 08:47:46,512 [ERROR] No JSON object could be decoded
+2016-07-11 08:47:46,512 [ERROR] TypeError: 140 lines
+2016-07-11 08:47:46,776 [ERROR] No JSON object could be decoded
+2016-07-11 08:47:46,778 [ERROR] TypeError: 140 lines
+2016-07-11 08:50:36,808 [ERROR] KeyError: 131 lines
+2016-07-11 08:50:36,809 [ERROR] 'group_code'
+2016-07-11 08:52:34,407 [ERROR] KeyError: 131 lines
+2016-07-11 08:52:34,407 [ERROR] 'group_code'
+2016-07-11 08:53:36,990 [ERROR] KeyError: 131 lines
+2016-07-11 08:53:36,990 [ERROR] 'group_code'
+2016-07-11 08:56:40,838 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 08:56:40,838 [ERROR] TypeError: 136 lines
+2016-07-11 09:00:50,190 [ERROR] KeyError: 131 lines
+2016-07-11 09:00:50,190 [ERROR] 'group_code'
+2016-07-11 09:01:29,667 [ERROR] KeyError: 131 lines
+2016-07-11 09:01:29,668 [ERROR] 'group_code'
+2016-07-11 09:10:26,319 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 09:10:26,319 [ERROR] TypeError: 136 lines
+2016-07-11 09:15:45,846 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 09:15:45,846 [ERROR] TypeError: 136 lines
+2016-07-11 09:17:26,068 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 09:17:26,069 [ERROR] TypeError: 136 lines
+2016-07-11 09:19:05,809 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 09:19:05,809 [ERROR] TypeError: 136 lines
+2016-07-11 09:28:01,058 [ERROR] KeyError: 131 lines
+2016-07-11 09:28:01,059 [ERROR] 'group_code'
+2016-07-11 09:29:40,947 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 09:29:40,947 [ERROR] TypeError: 136 lines
+2016-07-11 09:33:18,434 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 09:33:18,434 [ERROR] TypeError: 136 lines
+2016-07-11 09:39:16,446 [ERROR] KeyError: 131 lines
+2016-07-11 09:39:16,447 [ERROR] 'group_code'
+2016-07-11 09:40:01,127 [ERROR] KeyError: 131 lines
+2016-07-11 09:40:01,127 [ERROR] 'group_code'
+2016-07-11 09:45:32,859 [ERROR] KeyError: 131 lines
+2016-07-11 09:45:32,859 [ERROR] 'group_code'
+2016-07-11 09:46:18,025 [ERROR] KeyError: 131 lines
+2016-07-11 09:46:18,025 [ERROR] 'group_code'
+2016-07-11 09:47:05,036 [ERROR] KeyError: 131 lines
+2016-07-11 09:47:05,038 [ERROR] 'group_code'
+2016-07-11 09:49:41,539 [ERROR] KeyError: 131 lines
+2016-07-11 09:49:41,539 [ERROR] 'group_code'
+2016-07-11 09:52:01,887 [ERROR] KeyError: 131 lines
+2016-07-11 09:52:01,887 [ERROR] 'group_code'
+2016-07-11 09:52:46,762 [ERROR] KeyError: 131 lines
+2016-07-11 09:52:46,762 [ERROR] 'group_code'
+2016-07-11 09:53:42,562 [ERROR] KeyError: 131 lines
+2016-07-11 09:53:42,562 [ERROR] 'group_code'
+2016-07-11 09:53:57,276 [ERROR] KeyError: 131 lines
+2016-07-11 09:53:57,276 [ERROR] 'group_code'
+2016-07-11 09:54:17,937 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 09:54:17,937 [ERROR] TypeError: 136 lines
+2016-07-11 09:54:38,154 [ERROR] KeyError: 131 lines
+2016-07-11 09:54:38,154 [ERROR] 'group_code'
+2016-07-11 09:54:43,392 [ERROR] KeyError: 131 lines
+2016-07-11 09:54:43,392 [ERROR] 'group_code'
+2016-07-11 09:55:04,793 [ERROR] KeyError: 131 lines
+2016-07-11 09:55:04,793 [ERROR] 'group_code'
+2016-07-11 09:55:13,082 [ERROR] KeyError: 131 lines
+2016-07-11 09:55:13,082 [ERROR] 'group_code'
+2016-07-11 09:55:23,625 [ERROR] KeyError: 131 lines
+2016-07-11 09:55:23,627 [ERROR] 'group_code'
+2016-07-11 09:56:10,299 [ERROR] KeyError: 131 lines
+2016-07-11 09:56:10,301 [ERROR] 'group_code'
+2016-07-11 09:56:19,586 [ERROR] KeyError: 131 lines
+2016-07-11 09:56:19,586 [ERROR] 'group_code'
+2016-07-11 09:56:20,823 [ERROR] KeyError: 131 lines
+2016-07-11 09:56:20,823 [ERROR] 'group_code'
+2016-07-11 09:56:27,838 [ERROR] KeyError: 131 lines
+2016-07-11 09:56:27,839 [ERROR] 'group_code'
+2016-07-11 09:56:32,528 [ERROR] KeyError: 131 lines
+2016-07-11 09:56:32,528 [ERROR] 'group_code'
+2016-07-11 09:56:37,775 [ERROR] KeyError: 131 lines
+2016-07-11 09:56:37,776 [ERROR] 'group_code'
+2016-07-11 09:56:39,473 [ERROR] KeyError: 131 lines
+2016-07-11 09:56:39,473 [ERROR] 'group_code'
+2016-07-11 09:56:51,990 [ERROR] KeyError: 131 lines
+2016-07-11 09:56:51,990 [ERROR] 'group_code'
+2016-07-11 09:56:53,013 [ERROR] KeyError: 131 lines
+2016-07-11 09:56:53,013 [ERROR] 'group_code'
+2016-07-11 09:56:57,130 [ERROR] KeyError: 131 lines
+2016-07-11 09:56:57,131 [ERROR] 'group_code'
+2016-07-11 09:56:57,276 [ERROR] KeyError: 131 lines
+2016-07-11 09:56:57,276 [ERROR] 'group_code'
+2016-07-11 09:57:18,002 [ERROR] KeyError: 131 lines
+2016-07-11 09:57:18,002 [ERROR] 'group_code'
+2016-07-11 09:57:24,673 [ERROR] KeyError: 131 lines
+2016-07-11 09:57:24,673 [ERROR] 'group_code'
+2016-07-11 09:57:33,134 [ERROR] KeyError: 131 lines
+2016-07-11 09:57:33,134 [ERROR] 'group_code'
+2016-07-11 09:57:45,609 [ERROR] KeyError: 131 lines
+2016-07-11 09:57:45,609 [ERROR] 'group_code'
+2016-07-11 09:57:52,263 [ERROR] KeyError: 131 lines
+2016-07-11 09:57:52,263 [ERROR] 'group_code'
+2016-07-11 09:58:03,190 [ERROR] KeyError: 131 lines
+2016-07-11 09:58:03,190 [ERROR] 'group_code'
+2016-07-11 09:58:13,345 [ERROR] KeyError: 131 lines
+2016-07-11 09:58:13,345 [ERROR] 'group_code'
+2016-07-11 09:58:25,509 [ERROR] KeyError: 131 lines
+2016-07-11 09:58:25,509 [ERROR] 'group_code'
+2016-07-11 09:58:40,732 [ERROR] KeyError: 131 lines
+2016-07-11 09:58:40,733 [ERROR] 'group_code'
+2016-07-11 09:58:54,634 [ERROR] KeyError: 131 lines
+2016-07-11 09:58:54,634 [ERROR] 'group_code'
+2016-07-11 09:58:58,183 [ERROR] KeyError: 131 lines
+2016-07-11 09:58:58,184 [ERROR] 'group_code'
+2016-07-11 09:58:59,921 [ERROR] KeyError: 131 lines
+2016-07-11 09:58:59,923 [ERROR] 'group_code'
+2016-07-11 09:59:15,476 [ERROR] KeyError: 131 lines
+2016-07-11 09:59:15,476 [ERROR] 'group_code'
+2016-07-11 09:59:24,819 [ERROR] KeyError: 131 lines
+2016-07-11 09:59:24,819 [ERROR] 'group_code'
+2016-07-11 09:59:25,977 [ERROR] KeyError: 131 lines
+2016-07-11 09:59:25,977 [ERROR] 'group_code'
+2016-07-11 09:59:29,180 [ERROR] KeyError: 131 lines
+2016-07-11 09:59:29,180 [ERROR] 'group_code'
+2016-07-11 09:59:43,713 [ERROR] KeyError: 131 lines
+2016-07-11 09:59:43,714 [ERROR] 'group_code'
+2016-07-11 09:59:50,563 [ERROR] KeyError: 131 lines
+2016-07-11 09:59:50,565 [ERROR] 'group_code'
+2016-07-11 09:59:51,615 [ERROR] KeyError: 131 lines
+2016-07-11 09:59:51,615 [ERROR] 'group_code'
+2016-07-11 09:59:54,256 [ERROR] KeyError: 131 lines
+2016-07-11 09:59:54,256 [ERROR] 'group_code'
+2016-07-11 09:59:58,141 [ERROR] KeyError: 131 lines
+2016-07-11 09:59:58,141 [ERROR] 'group_code'
+2016-07-11 10:00:05,036 [ERROR] KeyError: 131 lines
+2016-07-11 10:00:05,036 [ERROR] 'group_code'
+2016-07-11 10:00:13,825 [ERROR] KeyError: 131 lines
+2016-07-11 10:00:13,825 [ERROR] 'group_code'
+2016-07-11 10:01:40,680 [ERROR] KeyError: 131 lines
+2016-07-11 10:01:40,681 [ERROR] 'group_code'
+2016-07-11 10:04:40,480 [ERROR] KeyError: 131 lines
+2016-07-11 10:04:40,480 [ERROR] 'group_code'
+2016-07-11 10:04:42,769 [ERROR] KeyError: 131 lines
+2016-07-11 10:04:42,769 [ERROR] 'group_code'
+2016-07-11 10:08:34,144 [ERROR] KeyError: 131 lines
+2016-07-11 10:08:34,144 [ERROR] 'group_code'
+2016-07-11 10:08:42,734 [ERROR] KeyError: 131 lines
+2016-07-11 10:08:42,734 [ERROR] 'group_code'
+2016-07-11 10:15:04,349 [ERROR] KeyError: 131 lines
+2016-07-11 10:15:04,349 [ERROR] 'group_code'
+2016-07-11 10:16:18,338 [ERROR] KeyError: 131 lines
+2016-07-11 10:16:18,338 [ERROR] 'group_code'
+2016-07-11 10:17:02,263 [ERROR] KeyError: 131 lines
+2016-07-11 10:17:02,263 [ERROR] 'group_code'
+2016-07-11 10:17:15,976 [ERROR] KeyError: 131 lines
+2016-07-11 10:17:15,976 [ERROR] 'group_code'
+2016-07-11 10:19:19,085 [ERROR] KeyError: 131 lines
+2016-07-11 10:19:19,085 [ERROR] 'group_code'
+2016-07-11 10:19:28,005 [ERROR] KeyError: 131 lines
+2016-07-11 10:19:28,005 [ERROR] 'group_code'
+2016-07-11 10:19:38,828 [ERROR] KeyError: 131 lines
+2016-07-11 10:19:38,828 [ERROR] 'group_code'
+2016-07-11 10:19:48,915 [ERROR] KeyError: 131 lines
+2016-07-11 10:19:48,915 [ERROR] 'group_code'
+2016-07-11 10:20:16,319 [ERROR] KeyError: 131 lines
+2016-07-11 10:20:16,319 [ERROR] 'group_code'
+2016-07-11 10:20:37,585 [ERROR] KeyError: 131 lines
+2016-07-11 10:20:37,585 [ERROR] 'group_code'
+2016-07-11 10:20:57,582 [ERROR] KeyError: 131 lines
+2016-07-11 10:20:57,582 [ERROR] 'group_code'
+2016-07-11 10:21:30,713 [ERROR] KeyError: 131 lines
+2016-07-11 10:21:30,713 [ERROR] 'group_code'
+2016-07-11 10:21:53,339 [ERROR] KeyError: 131 lines
+2016-07-11 10:21:53,339 [ERROR] 'group_code'
+2016-07-11 10:22:18,522 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 10:22:18,522 [ERROR] TypeError: 136 lines
+2016-07-11 10:22:51,944 [ERROR] KeyError: 131 lines
+2016-07-11 10:22:51,944 [ERROR] '1909416135'
+2016-07-11 10:23:04,306 [ERROR] KeyError: 131 lines
+2016-07-11 10:23:04,306 [ERROR] '1909416135'
+2016-07-11 10:28:37,667 [ERROR] KeyError: 131 lines
+2016-07-11 10:28:37,668 [ERROR] 'group_code'
+2016-07-11 10:29:29,940 [ERROR] KeyError: 131 lines
+2016-07-11 10:29:29,940 [ERROR] 'group_code'
+2016-07-11 10:29:52,793 [ERROR] KeyError: 131 lines
+2016-07-11 10:29:52,795 [ERROR] 'group_code'
+2016-07-11 10:30:14,211 [ERROR] KeyError: 131 lines
+2016-07-11 10:30:14,211 [ERROR] 'group_code'
+2016-07-11 10:32:31,625 [ERROR] No JSON object could be decoded
+2016-07-11 10:32:31,625 [ERROR] TypeError: 140 lines
+2016-07-11 10:33:46,878 [ERROR] KeyError: 131 lines
+2016-07-11 10:33:46,878 [ERROR] 'group_code'
+2016-07-11 10:33:59,878 [ERROR] KeyError: 131 lines
+2016-07-11 10:33:59,878 [ERROR] 'group_code'
+2016-07-11 10:34:49,523 [ERROR] KeyError: 131 lines
+2016-07-11 10:34:49,523 [ERROR] 'group_code'
+2016-07-11 10:35:13,747 [ERROR] KeyError: 131 lines
+2016-07-11 10:35:13,747 [ERROR] 'group_code'
+2016-07-11 10:35:26,618 [ERROR] KeyError: 131 lines
+2016-07-11 10:35:26,618 [ERROR] 'group_code'
+2016-07-11 10:35:30,198 [ERROR] KeyError: 131 lines
+2016-07-11 10:35:30,200 [ERROR] 'group_code'
+2016-07-11 10:35:32,010 [ERROR] KeyError: 131 lines
+2016-07-11 10:35:32,012 [ERROR] 'group_code'
+2016-07-11 10:35:36,446 [ERROR] KeyError: 131 lines
+2016-07-11 10:35:36,446 [ERROR] 'group_code'
+2016-07-11 10:35:50,477 [ERROR] KeyError: 131 lines
+2016-07-11 10:35:50,477 [ERROR] 'group_code'
+2016-07-11 10:39:40,023 [ERROR] KeyError: 131 lines
+2016-07-11 10:39:40,023 [ERROR] '339658986'
+2016-07-11 10:39:41,930 [ERROR] KeyError: 131 lines
+2016-07-11 10:39:41,930 [ERROR] 'group_code'
+2016-07-11 10:40:59,933 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 10:40:59,934 [ERROR] TypeError: 136 lines
+2016-07-11 10:41:00,010 [ERROR] No JSON object could be decoded
+2016-07-11 10:41:00,012 [ERROR] TypeError: 140 lines
+2016-07-11 10:41:29,530 [ERROR] KeyError: 131 lines
+2016-07-11 10:41:29,532 [ERROR] 'group_code'
+2016-07-11 10:41:52,336 [ERROR] KeyError: 131 lines
+2016-07-11 10:41:52,338 [ERROR] 'group_code'
+2016-07-11 10:42:08,707 [ERROR] KeyError: 131 lines
+2016-07-11 10:42:08,707 [ERROR] 'group_code'
+2016-07-11 10:42:28,631 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 10:42:28,631 [ERROR] TypeError: 136 lines
+2016-07-11 10:43:06,638 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 10:43:06,638 [ERROR] TypeError: 136 lines
+2016-07-11 10:43:19,072 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 10:43:19,072 [ERROR] TypeError: 136 lines
+2016-07-11 10:43:25,148 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 10:43:25,148 [ERROR] TypeError: 136 lines
+2016-07-11 10:44:11,815 [ERROR] KeyError: 131 lines
+2016-07-11 10:44:11,816 [ERROR] 'group_code'
+2016-07-11 10:44:26,688 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 10:44:26,688 [ERROR] TypeError: 136 lines
+2016-07-11 10:44:46,767 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 10:44:46,767 [ERROR] TypeError: 136 lines
+2016-07-11 10:44:46,793 [ERROR] No JSON object could be decoded
+2016-07-11 10:44:46,795 [ERROR] TypeError: 140 lines
+2016-07-11 10:45:00,243 [ERROR] No JSON object could be decoded
+2016-07-11 10:45:00,243 [ERROR] TypeError: 140 lines
+2016-07-11 10:46:01,687 [ERROR] No JSON object could be decoded
+2016-07-11 10:46:01,690 [ERROR] TypeError: 140 lines
+2016-07-11 10:46:16,859 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 10:46:16,859 [ERROR] TypeError: 136 lines
+2016-07-11 10:47:00,163 [ERROR] No JSON object could be decoded
+2016-07-11 10:47:00,164 [ERROR] TypeError: 140 lines
+2016-07-11 10:47:10,134 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 10:47:10,134 [ERROR] TypeError: 136 lines
+2016-07-11 10:47:33,368 [ERROR] KeyError: 131 lines
+2016-07-11 10:47:33,368 [ERROR] '4065424901'
+2016-07-11 10:47:58,188 [ERROR] KeyError: 131 lines
+2016-07-11 10:47:58,188 [ERROR] 'group_code'
+2016-07-11 10:48:08,838 [ERROR] KeyError: 131 lines
+2016-07-11 10:48:08,839 [ERROR] 'group_code'
+2016-07-11 10:48:14,239 [ERROR] KeyError: 131 lines
+2016-07-11 10:48:14,239 [ERROR] 'group_code'
+2016-07-11 10:49:17,842 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 10:49:17,842 [ERROR] TypeError: 136 lines
+2016-07-11 10:49:31,855 [ERROR] No JSON object could be decoded
+2016-07-11 10:49:31,855 [ERROR] TypeError: 140 lines
+2016-07-11 10:49:44,193 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 10:49:44,193 [ERROR] TypeError: 136 lines
+2016-07-11 10:51:18,808 [ERROR] KeyError: 131 lines
+2016-07-11 10:51:18,809 [ERROR] 'group_code'
+2016-07-11 10:52:10,088 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 10:52:10,088 [ERROR] TypeError: 136 lines
+2016-07-11 10:53:33,155 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 10:53:33,155 [ERROR] TypeError: 136 lines
+2016-07-11 10:54:37,507 [ERROR] KeyError: 131 lines
+2016-07-11 10:54:37,507 [ERROR] 'group_code'
+2016-07-11 10:54:39,236 [ERROR] KeyError: 131 lines
+2016-07-11 10:54:39,237 [ERROR] 'group_code'
+2016-07-11 10:54:54,750 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 10:54:54,750 [ERROR] TypeError: 136 lines
+2016-07-11 10:55:30,022 [ERROR] No JSON object could be decoded
+2016-07-11 10:55:30,023 [ERROR] TypeError: 140 lines
+2016-07-11 10:56:30,108 [ERROR] No JSON object could be decoded
+2016-07-11 10:56:30,109 [ERROR] TypeError: 140 lines
+2016-07-11 10:57:07,509 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 10:57:07,509 [ERROR] TypeError: 136 lines
+2016-07-11 10:58:29,552 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 10:58:29,552 [ERROR] TypeError: 136 lines
+2016-07-11 10:59:07,421 [ERROR] KeyError: 131 lines
+2016-07-11 10:59:07,423 [ERROR] 'group_code'
+2016-07-11 10:59:14,782 [ERROR] KeyError: 131 lines
+2016-07-11 10:59:14,783 [ERROR] 'group_code'
+2016-07-11 10:59:19,423 [ERROR] KeyError: 131 lines
+2016-07-11 10:59:19,424 [ERROR] 'group_code'
+2016-07-11 10:59:22,358 [ERROR] KeyError: 131 lines
+2016-07-11 10:59:22,358 [ERROR] 'group_code'
+2016-07-11 11:01:19,430 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 11:01:19,431 [ERROR] TypeError: 136 lines
+2016-07-11 11:01:52,148 [ERROR] KeyError: 131 lines
+2016-07-11 11:01:52,148 [ERROR] 'group_code'
+2016-07-11 11:01:56,970 [ERROR] KeyError: 131 lines
+2016-07-11 11:01:56,970 [ERROR] 'group_code'
+2016-07-11 11:02:05,107 [ERROR] KeyError: 131 lines
+2016-07-11 11:02:05,107 [ERROR] 'group_code'
+2016-07-11 11:02:45,447 [ERROR] KeyError: 131 lines
+2016-07-11 11:02:45,447 [ERROR] 'group_code'
+2016-07-11 11:02:45,490 [ERROR] No JSON object could be decoded
+2016-07-11 11:02:45,492 [ERROR] TypeError: 140 lines
+2016-07-11 11:02:54,346 [ERROR] KeyError: 131 lines
+2016-07-11 11:02:54,348 [ERROR] 'group_code'
+2016-07-11 11:03:03,493 [ERROR] KeyError: 131 lines
+2016-07-11 11:03:03,494 [ERROR] 'group_code'
+2016-07-11 11:03:12,653 [ERROR] KeyError: 131 lines
+2016-07-11 11:03:12,653 [ERROR] 'group_code'
+2016-07-11 11:03:56,073 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 11:03:56,073 [ERROR] TypeError: 136 lines
+2016-07-11 11:04:18,930 [ERROR] KeyError: 131 lines
+2016-07-11 11:04:18,930 [ERROR] 'group_code'
+2016-07-11 11:04:42,065 [ERROR] KeyError: 131 lines
+2016-07-11 11:04:42,066 [ERROR] 'group_code'
+2016-07-11 11:05:01,279 [ERROR] KeyError: 131 lines
+2016-07-11 11:05:01,279 [ERROR] 'group_code'
+2016-07-11 11:05:42,398 [ERROR] No JSON object could be decoded
+2016-07-11 11:05:42,398 [ERROR] TypeError: 140 lines
+2016-07-11 11:05:44,921 [ERROR] KeyError: 131 lines
+2016-07-11 11:05:44,921 [ERROR] 'group_code'
+2016-07-11 11:05:57,003 [ERROR] KeyError: 131 lines
+2016-07-11 11:05:57,003 [ERROR] 'group_code'
+2016-07-11 11:06:21,210 [ERROR] KeyError: 131 lines
+2016-07-11 11:06:21,210 [ERROR] 'group_code'
+2016-07-11 11:07:41,069 [ERROR] KeyError: 131 lines
+2016-07-11 11:07:41,069 [ERROR] 'group_code'
+2016-07-11 11:07:41,105 [ERROR] No JSON object could be decoded
+2016-07-11 11:07:41,105 [ERROR] TypeError: 140 lines
+2016-07-11 11:07:44,306 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 11:07:44,306 [ERROR] TypeError: 136 lines
+2016-07-11 11:07:44,335 [ERROR] No JSON object could be decoded
+2016-07-11 11:07:44,335 [ERROR] TypeError: 140 lines
+2016-07-11 11:10:59,153 [ERROR] KeyError: 131 lines
+2016-07-11 11:10:59,153 [ERROR] 'group_code'
+2016-07-11 11:13:44,848 [ERROR] KeyError: 131 lines
+2016-07-11 11:13:44,848 [ERROR] 'group_code'
+2016-07-11 11:15:15,854 [ERROR] No JSON object could be decoded
+2016-07-11 11:15:15,855 [ERROR] TypeError: 140 lines
+2016-07-11 11:17:31,786 [ERROR] No JSON object could be decoded
+2016-07-11 11:17:31,788 [ERROR] TypeError: 140 lines
+2016-07-11 11:19:46,098 [ERROR] No JSON object could be decoded
+2016-07-11 11:19:46,098 [ERROR] TypeError: 140 lines
+2016-07-11 11:20:28,437 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 11:20:28,438 [ERROR] TypeError: 136 lines
+2016-07-11 11:21:07,440 [ERROR] KeyError: 131 lines
+2016-07-11 11:21:07,440 [ERROR] 'group_code'
+2016-07-11 11:21:24,193 [ERROR] KeyError: 131 lines
+2016-07-11 11:21:24,193 [ERROR] 'group_code'
+2016-07-11 11:22:33,444 [ERROR] KeyError: 131 lines
+2016-07-11 11:22:33,446 [ERROR] 'group_code'
+2016-07-11 11:23:36,555 [ERROR] KeyError: 131 lines
+2016-07-11 11:23:36,555 [ERROR] 'group_code'
+2016-07-11 11:24:06,835 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 11:24:06,835 [ERROR] TypeError: 136 lines
+2016-07-11 11:26:54,198 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 11:26:54,200 [ERROR] TypeError: 136 lines
+2016-07-11 11:27:09,539 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 11:27:09,540 [ERROR] TypeError: 136 lines
+2016-07-11 11:28:31,006 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 11:28:31,006 [ERROR] TypeError: 136 lines
+2016-07-11 11:31:30,473 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 11:31:30,473 [ERROR] TypeError: 136 lines
+2016-07-11 11:34:09,065 [ERROR] KeyError: 131 lines
+2016-07-11 11:34:09,066 [ERROR] 'group_code'
+2016-07-11 11:34:12,483 [ERROR] KeyError: 131 lines
+2016-07-11 11:34:12,483 [ERROR] 'group_code'
+2016-07-11 11:37:09,673 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 11:37:09,674 [ERROR] TypeError: 136 lines
+2016-07-11 11:43:37,700 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 11:43:37,700 [ERROR] TypeError: 136 lines
+2016-07-11 11:47:51,421 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 11:47:51,423 [ERROR] TypeError: 136 lines
+2016-07-11 11:49:12,615 [ERROR] KeyError: 131 lines
+2016-07-11 11:49:12,615 [ERROR] '3216443570'
+2016-07-11 11:49:13,230 [ERROR] KeyError: 131 lines
+2016-07-11 11:49:13,232 [ERROR] '3216443570'
+2016-07-11 11:52:09,391 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 11:52:09,392 [ERROR] TypeError: 136 lines
+2016-07-11 11:55:11,951 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 11:55:11,951 [ERROR] TypeError: 136 lines
+2016-07-11 11:55:38,049 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 11:55:38,049 [ERROR] TypeError: 136 lines
+2016-07-11 11:55:48,904 [ERROR] KeyError: 131 lines
+2016-07-11 11:55:48,905 [ERROR] 'group_code'
+2016-07-11 11:56:41,227 [ERROR] KeyError: 131 lines
+2016-07-11 11:56:41,227 [ERROR] 'group_code'
+2016-07-11 11:57:22,957 [ERROR] KeyError: 131 lines
+2016-07-11 11:57:22,957 [ERROR] 'group_code'
+2016-07-11 11:57:35,450 [ERROR] KeyError: 131 lines
+2016-07-11 11:57:35,450 [ERROR] 'group_code'
+2016-07-11 11:58:16,229 [ERROR] KeyError: 131 lines
+2016-07-11 11:58:16,230 [ERROR] 'group_code'
+2016-07-11 11:58:40,250 [ERROR] KeyError: 131 lines
+2016-07-11 11:58:40,250 [ERROR] 'group_code'
+2016-07-11 11:59:14,927 [ERROR] KeyError: 131 lines
+2016-07-11 11:59:14,927 [ERROR] 'group_code'
+2016-07-11 11:59:23,167 [ERROR] KeyError: 131 lines
+2016-07-11 11:59:23,168 [ERROR] 'group_code'
+2016-07-11 11:59:48,306 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 11:59:48,306 [ERROR] TypeError: 136 lines
+2016-07-11 12:01:03,101 [ERROR] KeyError: 131 lines
+2016-07-11 12:01:03,101 [ERROR] 'group_code'
+2016-07-11 12:01:11,635 [ERROR] KeyError: 131 lines
+2016-07-11 12:01:11,637 [ERROR] 'group_code'
+2016-07-11 12:01:22,960 [ERROR] KeyError: 131 lines
+2016-07-11 12:01:22,960 [ERROR] 'group_code'
+2016-07-11 12:01:52,950 [ERROR] KeyError: 131 lines
+2016-07-11 12:01:52,950 [ERROR] 'group_code'
+2016-07-11 12:02:08,405 [ERROR] KeyError: 131 lines
+2016-07-11 12:02:08,405 [ERROR] 'group_code'
+2016-07-11 12:02:09,905 [ERROR] KeyError: 131 lines
+2016-07-11 12:02:09,905 [ERROR] 'group_code'
+2016-07-11 12:02:17,167 [ERROR] KeyError: 131 lines
+2016-07-11 12:02:17,167 [ERROR] 'group_code'
+2016-07-11 12:02:19,832 [ERROR] KeyError: 131 lines
+2016-07-11 12:02:19,832 [ERROR] 'group_code'
+2016-07-11 12:04:45,736 [ERROR] KeyError: 131 lines
+2016-07-11 12:04:45,737 [ERROR] 'group_code'
+2016-07-11 12:07:07,813 [ERROR] KeyError: 131 lines
+2016-07-11 12:07:07,813 [ERROR] 'group_code'
+2016-07-11 12:07:11,732 [ERROR] KeyError: 131 lines
+2016-07-11 12:07:11,732 [ERROR] 'group_code'
+2016-07-11 12:09:44,056 [ERROR] KeyError: 131 lines
+2016-07-11 12:09:44,056 [ERROR] 'group_code'
+2016-07-11 12:10:27,779 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 12:10:27,779 [ERROR] TypeError: 136 lines
+2016-07-11 12:14:47,815 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 12:14:47,815 [ERROR] TypeError: 136 lines
+2016-07-11 12:21:10,698 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 12:21:10,698 [ERROR] TypeError: 136 lines
+2016-07-11 12:25:13,661 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 12:25:13,663 [ERROR] TypeError: 136 lines
+2016-07-11 12:33:30,648 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 12:33:30,648 [ERROR] TypeError: 136 lines
+2016-07-11 12:44:42,644 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 12:44:42,644 [ERROR] TypeError: 136 lines
+2016-07-11 12:46:26,941 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 12:46:26,941 [ERROR] TypeError: 136 lines
+2016-07-11 12:49:21,976 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 12:49:21,976 [ERROR] TypeError: 136 lines
+2016-07-11 12:50:54,657 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 12:50:54,657 [ERROR] TypeError: 136 lines
+2016-07-11 12:56:06,989 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 12:56:06,989 [ERROR] TypeError: 136 lines
+2016-07-11 13:03:27,006 [ERROR] KeyError: 131 lines
+2016-07-11 13:03:27,006 [ERROR] 'group_code'
+2016-07-11 13:04:21,950 [ERROR] KeyError: 131 lines
+2016-07-11 13:04:21,950 [ERROR] 'group_code'
+2016-07-11 13:06:07,384 [ERROR] KeyError: 131 lines
+2016-07-11 13:06:07,384 [ERROR] 'group_code'
+2016-07-11 13:06:07,710 [ERROR] KeyError: 131 lines
+2016-07-11 13:06:07,710 [ERROR] 'group_code'
+2016-07-11 13:07:15,786 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 13:07:15,786 [ERROR] TypeError: 136 lines
+2016-07-11 13:45:11,180 [ERROR] KeyError: 131 lines
+2016-07-11 13:45:11,180 [ERROR] 'group_code'
+2016-07-11 14:00:15,196 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 14:00:15,196 [ERROR] TypeError: 136 lines
+2016-07-11 14:00:44,730 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 14:00:44,730 [ERROR] TypeError: 136 lines
+2016-07-11 14:06:48,095 [ERROR] KeyError: 131 lines
+2016-07-11 14:06:48,095 [ERROR] 'group_code'
+2016-07-11 14:08:02,803 [ERROR] KeyError: 131 lines
+2016-07-11 14:08:02,805 [ERROR] 'group_code'
+2016-07-11 14:09:12,977 [ERROR] KeyError: 131 lines
+2016-07-11 14:09:12,977 [ERROR] 'group_code'
+2016-07-11 14:09:52,992 [ERROR] KeyError: 131 lines
+2016-07-11 14:09:52,993 [ERROR] 'group_code'
+2016-07-11 14:09:57,434 [ERROR] KeyError: 131 lines
+2016-07-11 14:09:57,436 [ERROR] 'group_code'
+2016-07-11 14:10:22,118 [ERROR] KeyError: 131 lines
+2016-07-11 14:10:22,118 [ERROR] 'group_code'
+2016-07-11 14:11:08,914 [ERROR] KeyError: 131 lines
+2016-07-11 14:11:08,915 [ERROR] 'group_code'
+2016-07-11 14:11:14,355 [ERROR] KeyError: 131 lines
+2016-07-11 14:11:14,355 [ERROR] 'group_code'
+2016-07-11 14:11:42,907 [ERROR] KeyError: 131 lines
+2016-07-11 14:11:42,907 [ERROR] 'group_code'
+2016-07-11 14:11:53,496 [ERROR] KeyError: 131 lines
+2016-07-11 14:11:53,497 [ERROR] 'group_code'
+2016-07-11 14:15:45,917 [ERROR] KeyError: 131 lines
+2016-07-11 14:15:45,918 [ERROR] 'group_code'
+2016-07-11 14:17:47,005 [ERROR] No JSON object could be decoded
+2016-07-11 14:17:47,006 [ERROR] TypeError: 140 lines
+2016-07-11 15:35:00,301 [ERROR] No JSON object could be decoded
+2016-07-11 15:35:00,301 [ERROR] TypeError: 140 lines
+2016-07-11 15:55:31,563 [ERROR] No JSON object could be decoded
+2016-07-11 15:55:31,565 [ERROR] TypeError: 140 lines
+2016-07-11 15:55:53,299 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 15:55:53,301 [ERROR] TypeError: 154 lines
+2016-07-11 15:55:53,301 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",75]," 你是腰，我是颈部"],"from_uin":3957395535,"group_code":3957395535,"msg_id":13775,"msg_type":0,"send_uin":401414895,"time":1468223753,"to_uin":659030105}}],"retcode":0}
+
+2016-07-11 15:57:46,496 [ERROR] No JSON object could be decoded
+2016-07-11 15:57:46,499 [ERROR] TypeError: 140 lines
+2016-07-11 15:57:55,240 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 15:57:55,240 [ERROR] TypeError: 154 lines
+2016-07-11 15:57:55,240 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",57]],"from_uin":3334021715,"group_code":3334021715,"msg_id":22863,"msg_type":0,"send_uin":3179627417,"time":1468223875,"to_uin":659030105}}],"retcode":0}
+
+2016-07-11 15:58:47,548 [ERROR] No JSON object could be decoded
+2016-07-11 15:58:47,549 [ERROR] TypeError: 140 lines
+2016-07-11 15:59:31,155 [ERROR] No JSON object could be decoded
+2016-07-11 15:59:31,157 [ERROR] TypeError: 140 lines
+2016-07-11 15:59:31,713 [ERROR] No JSON object could be decoded
+2016-07-11 15:59:31,713 [ERROR] TypeError: 140 lines
+2016-07-11 16:04:30,329 [ERROR] No JSON object could be decoded
+2016-07-11 16:04:30,329 [ERROR] TypeError: 140 lines
+2016-07-11 16:04:53,930 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 16:04:53,930 [ERROR] TypeError: 154 lines
+2016-07-11 16:04:53,931 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",1]],"from_uin":3957395535,"group_code":3957395535,"msg_id":18812,"msg_type":0,"send_uin":34544894,"time":1468224293,"to_uin":659030105}}],"retcode":0}
+
+2016-07-11 16:10:28,877 [ERROR] No JSON object could be decoded
+2016-07-11 16:10:28,878 [ERROR] TypeError: 140 lines
+2016-07-11 16:12:46,530 [ERROR] No JSON object could be decoded
+2016-07-11 16:12:46,532 [ERROR] TypeError: 140 lines
+2016-07-11 16:14:11,917 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 16:14:11,917 [ERROR] TypeError: 154 lines
+2016-07-11 16:14:11,917 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",5]],"from_uin":1468202094,"group_code":1468202094,"msg_id":11729,"msg_type":0,"send_uin":3461311433,"time":1468224851,"to_uin":659030105}}],"retcode":0}
+
+2016-07-11 16:24:48,512 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 16:24:48,512 [ERROR] TypeError: 154 lines
+2016-07-11 16:24:48,512 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",118]],"from_uin":844055412,"group_code":844055412,"msg_id":8982,"msg_type":0,"send_uin":860081240,"time":1468225488,"to_uin":659030105}}],"retcode":0}
+
+2016-07-11 16:27:37,559 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 16:27:37,559 [ERROR] TypeError: 154 lines
+2016-07-11 16:27:37,559 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",6]],"from_uin":1468202094,"group_code":1468202094,"msg_id":7687,"msg_type":0,"send_uin":3184079500,"time":1468225657,"to_uin":659030105}}],"retcode":0}
+
+2016-07-11 16:27:45,913 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 16:27:45,913 [ERROR] TypeError: 154 lines
+2016-07-11 16:27:45,914 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",56]],"from_uin":3334021715,"group_code":3334021715,"msg_id":23275,"msg_type":0,"send_uin":3179627417,"time":1468225665,"to_uin":659030105}}],"retcode":0}
+
+2016-07-11 16:28:16,934 [ERROR] KeyError: 131 lines
+2016-07-11 16:28:16,936 [ERROR] '3590056809'
+2016-07-11 16:28:16,983 [ERROR] No JSON object could be decoded
+2016-07-11 16:28:16,983 [ERROR] TypeError: 140 lines
+2016-07-11 16:28:37,378 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 16:28:37,378 [ERROR] TypeError: 154 lines
+2016-07-11 16:28:37,378 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",56]],"from_uin":3334021715,"group_code":3334021715,"msg_id":38569,"msg_type":0,"send_uin":1704225179,"time":1468225717,"to_uin":659030105}}],"retcode":0}
+
+2016-07-11 16:30:37,073 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 16:30:37,073 [ERROR] TypeError: 154 lines
+2016-07-11 16:30:37,073 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",3]],"from_uin":1468202094,"group_code":1468202094,"msg_id":16198,"msg_type":0,"send_uin":2800245412,"time":1468225837,"to_uin":659030105}}],"retcode":0}
+
+2016-07-11 16:31:49,226 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 16:31:49,226 [ERROR] TypeError: 154 lines
+2016-07-11 16:31:49,226 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",58]],"from_uin":3957395535,"group_code":3957395535,"msg_id":38658,"msg_type":0,"send_uin":1704225179,"time":1468225909,"to_uin":659030105}}],"retcode":0}
+
+2016-07-11 16:38:11,384 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 16:38:11,384 [ERROR] TypeError: 154 lines
+2016-07-11 16:38:11,384 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",13],"我先记下来修改办法 你下次更新到新版里"],"from_uin":1468202094,"group_code":1468202094,"msg_id":42847,"msg_type":0,"send_uin":4137525594,"time":1468226291,"to_uin":659030105}}],"retcode":0}
+
+2016-07-11 16:38:13,000 [ERROR] KeyError: 131 lines
+2016-07-11 16:38:13,000 [ERROR] '4021995216'
+2016-07-11 16:50:15,128 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 16:50:15,128 [ERROR] TypeError: 154 lines
+2016-07-11 16:50:15,128 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",57]],"from_uin":3334021715,"group_code":3334021715,"msg_id":39667,"msg_type":0,"send_uin":1704225179,"time":1468227015,"to_uin":659030105}}],"retcode":0}
+
+2016-07-11 16:53:01,075 [ERROR] No JSON object could be decoded
+2016-07-11 16:53:01,075 [ERROR] TypeError: 140 lines
+2016-07-11 16:55:24,680 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 16:55:24,681 [ERROR] TypeError: 154 lines
+2016-07-11 16:55:24,681 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",13]],"from_uin":3957395535,"group_code":3957395535,"msg_id":42648,"msg_type":0,"send_uin":4234107644,"time":1468227324,"to_uin":659030105}}],"retcode":0}
+
+2016-07-11 16:56:49,118 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 16:56:49,118 [ERROR] TypeError: 154 lines
+2016-07-11 16:56:49,118 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",13]],"from_uin":3957395535,"group_code":3957395535,"msg_id":42656,"msg_type":0,"send_uin":4234107644,"time":1468227409,"to_uin":659030105}}],"retcode":0}
+
+2016-07-11 17:02:40,783 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 17:02:40,785 [ERROR] TypeError: 154 lines
+2016-07-11 17:02:40,785 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",33],"谢谢"],"from_uin":441562912,"group_code":441562912,"msg_id":32960,"msg_type":0,"send_uin":1959942045,"time":1468227760,"to_uin":659030105}}],"retcode":0}
+
+2016-07-11 17:18:14,908 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 17:18:14,910 [ERROR] TypeError: 154 lines
+2016-07-11 17:18:14,910 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",13],"好的"],"from_uin":441562912,"group_code":441562912,"msg_id":8207,"msg_type":0,"send_uin":747504534,"time":1468228694,"to_uin":659030105}}],"retcode":0}
+
+2016-07-11 17:18:54,220 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 17:18:54,220 [ERROR] TypeError: 154 lines
+2016-07-11 17:18:54,221 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",46]],"from_uin":1288569431,"group_code":1288569431,"msg_id":12473,"msg_type":0,"send_uin":225335213,"time":1468228734,"to_uin":659030105}}],"retcode":0}
+
+2016-07-11 17:21:16,878 [ERROR] No JSON object could be decoded
+2016-07-11 17:21:16,878 [ERROR] TypeError: 140 lines
+2016-07-11 17:22:27,249 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 17:22:27,250 [ERROR] TypeError: 154 lines
+2016-07-11 17:22:27,250 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",97]],"from_uin":1288569431,"group_code":1288569431,"msg_id":29602,"msg_type":0,"send_uin":1684959068,"time":1468228947,"to_uin":659030105}}],"retcode":0}
+
+2016-07-11 17:22:50,786 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 17:22:50,788 [ERROR] TypeError: 154 lines
+2016-07-11 17:22:50,788 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",46]],"from_uin":3334021715,"group_code":3334021715,"msg_id":27858,"msg_type":0,"send_uin":2226569029,"time":1468228970,"to_uin":659030105}}],"retcode":0}
+
+2016-07-11 17:29:24,244 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 17:29:24,246 [ERROR] TypeError: 154 lines
+2016-07-11 17:29:24,246 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",13]],"from_uin":3334021715,"group_code":3334021715,"msg_id":34633,"msg_type":0,"send_uin":2798647769,"time":1468229364,"to_uin":659030105}}],"retcode":0}
+
+2016-07-11 17:40:15,542 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 17:40:15,542 [ERROR] TypeError: 154 lines
+2016-07-11 17:40:15,542 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",13]],"from_uin":1288569431,"group_code":1288569431,"msg_id":3641,"msg_type":0,"send_uin":4057898200,"time":1468230015,"to_uin":659030105}}],"retcode":0}
+
+2016-07-11 17:48:14,598 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 17:48:14,598 [ERROR] TypeError: 154 lines
+2016-07-11 17:48:14,598 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",46]],"from_uin":1288569431,"group_code":1288569431,"msg_id":9081,"msg_type":0,"send_uin":1363728855,"time":1468230494,"to_uin":659030105}}],"retcode":0}
+
+2016-07-11 17:48:43,780 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 17:48:43,780 [ERROR] TypeError: 154 lines
+2016-07-11 17:48:43,782 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",2]],"from_uin":441562912,"group_code":441562912,"msg_id":5049,"msg_type":0,"send_uin":1412176652,"time":1468230523,"to_uin":659030105}}],"retcode":0}
+
+2016-07-11 17:52:30,405 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 17:52:30,407 [ERROR] TypeError: 154 lines
+2016-07-11 17:52:30,407 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",57]],"from_uin":3334021715,"group_code":3334021715,"msg_id":43701,"msg_type":0,"send_uin":1704225179,"time":1468230750,"to_uin":659030105}}],"retcode":0}
+
+2016-07-11 17:54:59,058 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 17:54:59,058 [ERROR] TypeError: 154 lines
+2016-07-11 17:54:59,058 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",58]],"from_uin":3334021715,"group_code":3334021715,"msg_id":43969,"msg_type":0,"send_uin":1704225179,"time":1468230898,"to_uin":659030105}}],"retcode":0}
+
+2016-07-11 17:56:59,821 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 17:56:59,821 [ERROR] TypeError: 154 lines
+2016-07-11 17:56:59,821 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",57]],"from_uin":3334021715,"group_code":3334021715,"msg_id":44034,"msg_type":0,"send_uin":1704225179,"time":1468231019,"to_uin":659030105}}],"retcode":0}
+
+2016-07-11 17:57:14,549 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 17:57:14,549 [ERROR] TypeError: 154 lines
+2016-07-11 17:57:14,549 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",82],"我已经在叼开发了，"],"from_uin":3957395535,"group_code":3957395535,"msg_id":38784,"msg_type":0,"send_uin":3263618238,"time":1468231034,"to_uin":659030105}}],"retcode":0}
+
+2016-07-11 18:03:39,971 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 18:03:39,973 [ERROR] TypeError: 154 lines
+2016-07-11 18:03:39,973 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",58]],"from_uin":3957395535,"group_code":3957395535,"msg_id":44418,"msg_type":0,"send_uin":1704225179,"time":1468231419,"to_uin":659030105}}],"retcode":0}
+
+2016-07-11 18:16:39,585 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-11 18:16:39,585 [ERROR] TypeError: 154 lines
+2016-07-11 18:16:39,585 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",13]],"from_uin":3334021715,"group_code":3334021715,"msg_id":23587,"msg_type":0,"send_uin":2226569029,"time":1468232199,"to_uin":659030105}}],"retcode":0}
+

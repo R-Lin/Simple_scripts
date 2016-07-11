@@ -69,7 +69,7 @@ class SmartQQ():
         url = self.url_dic['check_scan'].format(self.para_dic)
         while 1:
             result = eval(self.url_request.get(url, verify=True).text[6:-3])
-            self.log.info(result[4])
+            self.log.info(result[4])                # return login result
             if result[0] == '0':
                 redirect_url = result[2]
                 self.url_request.get(redirect_url)  # visit redirect_url to modify the session cookies
@@ -85,7 +85,7 @@ class SmartQQ():
                     )
         }
         self.url_request.headers['Referer'] = 'http://d1.web2.qq.com/proxy.html?v=20151105001&callback=1&id=2'
-        result = json.loads(self.url_request.post( 'http://d1.web2.qq.com/channel/login2', data=r_data).text)
+        result = json.loads(self.url_request.post('http://d1.web2.qq.com/channel/login2', data=r_data).text)
         self.psessionid = result['result']['psessionid']
         vfwebqq_url = "http://s.web2.qq.com/api/getvfwebqq?ptwebqq={0}&clientid={1}&psessionid={2}&t={3}".format(
                         self.qtwebqq,
@@ -95,6 +95,16 @@ class SmartQQ():
                     )
         result2 = json.loads(self.url_request.get(vfwebqq_url).text)
         self.vfwebqq = result2['result']['vfwebqq']
+        activate = json.loads(
+            self.url_request.get(self.url_dic['get_online_buddies2']).text
+            )
+
+        if activate['retcode']:
+            self.log.info('Activate suessfully!')
+        else:
+            self.log.error(
+                'Activate failed! Retcode:', activate.get('retcode', "wrong")
+            )
 
     def poll(self):
         """
@@ -114,31 +124,34 @@ class SmartQQ():
             # sys.exit()
             while 1:
                 try:
-                    mess = json.loads(
-                        self.url_request.post(self.url_dic['pollMessage'], data=data).text
-                    )
-                    # print mess
-                    messages = mess['result'][0]['value']
-                    # print messages
-                    words = messages['content'][1]
-                    groupid = str(messages['group_code'])
-                    if groupid not in self.groupMember:
-                        self.log.info('GroupId : %s is not in dict GroupName'%groupid)
-                        self.groupInfo(groupid)
-                    send_uid = str(messages['send_uin'])
-                    print self.groupName[groupid]['name'], self.groupMember[groupid][send_uid] + ":" + words
+                    reponse = self.url_request.post(self.url_dic['pollMessage'], data=data).text
+                    mess = json.loads(reponse)
+                    # messages = mess['result'][0]['value']    # result set
+                    for messages in mess['result']:
+                        from_uin = str(messages['value']['from_uin'])
+                        words = messages['value']['content'][1]
+
+                        if messages['poll_type'] == 'message':
+                            self.log.info("The 136 line %s : %s" % (from_uin, words))
+                        elif messages['poll_type'] == 'group_message':
+                            if from_uin not in self.groupMember:
+                                self.log.info('GroupId : %s is not in dict GroupName' % from_uin)
+                                self.groupInfo(from_uin)
+                            send_uid = str(messages['value']['send_uin'])
+                            print self.groupName[from_uin]['name'],
+                            print self.groupMember[from_uin][send_uid] + ":" + words
+
                 except KeyError as m:
                     if m.message != 'result':
                         self.log.error('KeyError: 131 lines')
                         self.log.error(m)
-                        print 133,self.groupName
-                        print 134, groupid, send_uid, self.groupMember
+                        print 133, self.groupName
+                        # print 134, groupid, send_uid, self.groupMember
                         print mess
                 except TypeError as e :
                     self.log.error(e)
-                    self.log.error('TypeError: 136 lines')
-                    # self.log.error(str(self.groupMember[groupid][send_uid]))
-                    print 140, self.groupMember[groupid][send_uid]
+                    self.log.error('TypeError: 154 lines')
+                    self.log.error(reponse)
 
                 except ValueError as e:
                     self.log.error(e)
@@ -146,8 +159,12 @@ class SmartQQ():
                     self.log.error('TypeError: 140 lines')
                     print self.url_request.post(self.url_dic['pollMessage'], data=data).text, 141
 
-    def groupInfo(self, groupid ):
+    def groupInfo(self, groupid):
+        """
+        According the GroupID, to set the GroupName_dic and GroupMem_dic
+        """
         self.log.info("Enter function groupInfo")
+
         def _hash_digest(uin, ptwebqq):
             """
             提取自http://pub.idqqimg.com/smartqq/js/mq.js
