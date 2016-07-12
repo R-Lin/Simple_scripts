@@ -1,6 +1,7 @@
 # coding:utf8
 import re
 import sys
+import random
 import time
 import json
 import ini
@@ -30,6 +31,7 @@ class SmartQQ:
             'groupNameList': 'http://s.web2.qq.com/api/get_group_name_list_mask2',
             'groupInfo': 'http://s.web2.qq.com/api/get_group_info_ext2?gcode={0}&vfwebqq={1}&t={2}',
             'pollMessage': 'http://d1.web2.qq.com/channel/poll2',
+            'send_qun' : 'http://d1.web2.qq.com/channel/send_qun_msg2',
             'para': (
                 'https://ui.ptlogin2.qq.com/cgi-bin/login?daid=164&target=self&style=16&mibao_css=m_webqq'
                 '&appid=501004106&enable_qlogin=0&no_verifyimg=1&s_url=http%3A%2F%2Fw.qq.com%2Fproxy.html&'
@@ -142,10 +144,12 @@ class SmartQQ:
             # print self.url_request.post('https://httpbin.org/post', data=data).text
             # sys.exit()
             while 1:
+                num = 0
                 try:
                     reponse = self.url_request.post(self.url_dic['pollMessage'], data=data).text
                     mess = json.loads(reponse)
                     # messages = mess['result'][0]['value']    # result set
+                    # print "149 messages_info", mess
                     for messages in mess['result']:
                         from_uin = str(messages['value']['from_uin'])
                         words = messages['value']['content'][1]
@@ -157,8 +161,18 @@ class SmartQQ:
                                 self.log.info('GroupId : %s is not in dict GroupName' % from_uin)
                                 self.get_group_info(from_uin)
                             send_uid = str(messages['value']['send_uin'])
-                            print self.groupName[from_uin]['name'],
-                            print self.groupMember[from_uin][send_uid] + ":" + words
+                            group_name = self.groupName[from_uin]['name']
+                            time.sleep(4)
+                            if '/awk/' in group_name:
+                                print '###########################TEST###########################'
+                                print group_name, from_uin
+                                if num % 6 == 0:
+                                    print self.send_messages(unicode(words)),
+                                num += 1
+                                print self.groupMember[from_uin][send_uid] + ":" + words
+                            else:
+                                print group_name,
+                                print self.groupMember[from_uin][send_uid] + ":" + words
 
                 except KeyError as m:
                     if m.message != 'result':
@@ -179,6 +193,19 @@ class SmartQQ:
                     print 181, mess
                     self.log.error('TypeError: 140 lines')
                     print 183, self.url_request.post(self.url_dic['pollMessage'], data=data).text
+
+    def send_messages(self, from_uin, messages='Test_talk'):
+        """
+        Send messages
+        """
+        data = ((
+            'r',
+            '{{"group_uin":{0}, "face":564,"content":"[\\"{4}\\",[\\"font\\",{{\\"name\\":\\"Arial\\",\\"size\\":\\"10\\",\\"style\\":[0,0,0],\\"color\\":\\"000000\\"}}]]","clientid":{1},"msg_id":{2},"psessionid":"{3}"}}'.format(
+                 from_uin, self.clientid, random.randint(1, 100000), self.psessionid, messages)),
+                ('clientid', self.clientid),
+                ('psessionid', self.psessionid))
+        result = self.url_request.post(self.url_dic['send_qun'], data=data).text
+        return result
 
     def get_group_info(self, groupid):
         """
@@ -224,6 +251,7 @@ class SmartQQ:
         )
         result = json.loads(response.text)
         if result['retcode'] == 0:
+            # print "228 ALL group info", result
             for group in result['result']['gnamelist']:
                 self.groupName[str(group['gid'])] = group
             self.log.info('Get groupList success!')
@@ -232,6 +260,7 @@ class SmartQQ:
             tmp_dic = {}
             url = self.url_dic['groupInfo'].format(group_id, self.vfwebqq, stamp)
             try:
+                # print "ALL member info ", self.url_request.get(url).text
                 member_list = json.loads(self.url_request.get(url).text)['result']['minfo']
                 for member in member_list:
                     tmp_dic[str(member['uin'])] = member['nick']
@@ -239,6 +268,8 @@ class SmartQQ:
             except KeyError:
                 print "KeyError The line is 187"
                 print json.loads(self.url_request.get(url).text)
+            # print "group_name", self.groupName
+            # print "group_mem", self.groupMember
 
     def main(self):
         self.get_comm_para()

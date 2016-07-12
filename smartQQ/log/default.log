@@ -415,3 +415,86 @@
 2016-07-12 16:32:16,996 [ERROR] TypeError: 176 lines
 2016-07-12 16:32:16,996 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",56]],"from_uin":1605286128,"group_code":1605286128,"msg_id":28576,"msg_type":0,"send_uin":3329622220,"time":1468312337,"to_uin":659030105}}],"retcode":0}
 
+2016-07-12 16:35:59,358 [ERROR] No JSON object could be decoded
+2016-07-12 16:35:59,358 [ERROR] TypeError: 140 lines
+2016-07-12 16:38:02,700 [ERROR] No JSON object could be decoded
+2016-07-12 16:38:02,700 [ERROR] TypeError: 140 lines
+2016-07-12 16:40:32,661 [ERROR] No JSON object could be decoded
+2016-07-12 16:40:32,661 [ERROR] TypeError: 140 lines
+2016-07-12 16:42:20,907 [ERROR] No JSON object could be decoded
+2016-07-12 16:42:20,907 [ERROR] TypeError: 140 lines
+2016-07-12 16:43:30,119 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-12 16:43:30,121 [ERROR] TypeError: 176 lines
+2016-07-12 16:43:30,121 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",13]],"from_uin":1605286128,"group_code":1605286128,"msg_id":21578,"msg_type":0,"send_uin":2489484757,"time":1468313010,"to_uin":659030105}}],"retcode":0}
+
+2016-07-12 16:43:41,901 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-12 16:43:41,901 [ERROR] TypeError: 176 lines
+2016-07-12 16:43:41,901 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",46]],"from_uin":1605286128,"group_code":1605286128,"msg_id":17653,"msg_type":0,"send_uin":2075963706,"time":1468313021,"to_uin":659030105}}],"retcode":0}
+
+2016-07-12 16:44:33,145 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-12 16:44:33,147 [ERROR] TypeError: 176 lines
+2016-07-12 16:44:33,148 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",13]],"from_uin":2506726180,"group_code":2506726180,"msg_id":12408,"msg_type":0,"send_uin":1369660452,"time":1468313073,"to_uin":659030105}}],"retcode":0}
+
+2016-07-12 16:46:28,632 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-12 16:46:28,632 [ERROR] TypeError: 176 lines
+2016-07-12 16:46:28,634 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",97]],"from_uin":3533508321,"group_code":3533508321,"msg_id":32724,"msg_type":0,"send_uin":4211787271,"time":1468313187,"to_uin":659030105}}],"retcode":0}
+
+2016-07-12 16:48:30,147 [ERROR] No JSON object could be decoded
+2016-07-12 16:48:30,148 [ERROR] TypeError: 140 lines
+2016-07-12 16:48:31,178 [ERROR] No JSON object could be decoded
+2016-07-12 16:48:31,180 [ERROR] TypeError: 140 lines
+2016-07-12 16:50:47,378 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-12 16:50:47,378 [ERROR] TypeError: 176 lines
+2016-07-12 16:50:47,378 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",57]],"from_uin":1605286128,"group_code":1605286128,"msg_id":29429,"msg_type":0,"send_uin":3329622220,"time":1468313444,"to_uin":659030105}}],"retcode":0}
+
+2016-07-12 16:52:08,901 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-12 16:52:08,901 [ERROR] TypeError: 176 lines
+2016-07-12 16:52:08,901 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",85]],"from_uin":1605286128,"group_code":1605286128,"msg_id":21638,"msg_type":0,"send_uin":2489484757,"time":1468313528,"to_uin":659030105}}],"retcode":0}
+
+2016-07-12 16:53:00,857 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-12 16:53:00,857 [ERROR] TypeError: 176 lines
+2016-07-12 16:53:00,857 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",13],"没事的时候得搞出点事，然后解决点事"],"from_uin":1605286128,"group_code":1605286128,"msg_id":21645,"msg_type":0,"send_uin":2489484757,"time":1468313580,"to_uin":659030105}}],"retcode":0}
+
+2016-07-12 17:24:07,433 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-12 17:24:07,434 [ERROR] TypeError: 176 lines
+2016-07-12 17:24:07,434 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",85]],"from_uin":3533508321,"group_code":3533508321,"msg_id":15965,"msg_type":0,"send_uin":1009989242,"time":1468315446,"to_uin":659030105}}],"retcode":0}
+
+2016-07-12 17:29:13,384 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-12 17:29:13,384 [ERROR] TypeError: 176 lines
+2016-07-12 17:29:13,384 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",13]],"from_uin":1605286128,"group_code":1605286128,"msg_id":12718,"msg_type":0,"send_uin":1369660452,"time":1468315753,"to_uin":659030105}}],"retcode":0}
+
+2016-07-12 17:29:17,002 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-12 17:29:17,002 [ERROR] TypeError: 176 lines
+2016-07-12 17:29:17,002 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",98]],"from_uin":3533508321,"group_code":3533508321,"msg_id":46242,"msg_type":0,"send_uin":2192494629,"time":1468315756,"to_uin":659030105}}],"retcode":0}
+
+2016-07-12 17:29:17,174 [ERROR] No JSON object could be decoded
+2016-07-12 17:29:17,174 [ERROR] TypeError: 140 lines
+2016-07-12 17:29:21,634 [ERROR] No JSON object could be decoded
+2016-07-12 17:29:21,634 [ERROR] TypeError: 140 lines
+2016-07-12 17:31:16,752 [ERROR] No JSON object could be decoded
+2016-07-12 17:31:16,753 [ERROR] TypeError: 140 lines
+2016-07-12 17:32:54,691 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-12 17:32:54,693 [ERROR] TypeError: 176 lines
+2016-07-12 17:32:54,693 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",98],"给他出了道题 他做出来了- - "],"from_uin":1605286128,"group_code":1605286128,"msg_id":16921,"msg_type":0,"send_uin":1764969260,"time":1468315974,"to_uin":659030105}}],"retcode":0}
+
+2016-07-12 17:33:16,460 [ERROR] No JSON object could be decoded
+2016-07-12 17:35:32,005 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-12 17:35:32,006 [ERROR] TypeError: 176 lines
+2016-07-12 17:35:32,006 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",13]],"from_uin":1605286128,"group_code":1605286128,"msg_id":4854,"msg_type":0,"send_uin":2038029314,"time":1468316131,"to_uin":659030105}}],"retcode":0}
+
+2016-07-12 18:35:25,384 [ERROR] KeyError: 131 lines
+2016-07-12 18:35:25,384 [ERROR] '3533508321'
+2016-07-12 18:35:37,094 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-12 18:35:37,094 [ERROR] TypeError: 176 lines
+2016-07-12 18:35:37,094 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",56],"他们貌似不懂python"],"from_uin":1043326464,"group_code":1043326464,"msg_id":40255,"msg_type":0,"send_uin":133009379,"time":1468319732,"to_uin":659030105}}],"retcode":0}
+
+2016-07-12 18:37:51,688 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-12 18:37:51,688 [ERROR] TypeError: 176 lines
+2016-07-12 18:37:51,688 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",13]],"from_uin":1605286128,"group_code":1605286128,"msg_id":50962,"msg_type":0,"send_uin":3034105349,"time":1468319791,"to_uin":659030105}}],"retcode":0}
+
+2016-07-12 18:40:06,605 [ERROR] 'ascii' codec can't encode character u'\u5927' in position 0: ordinal not in range(128)
+2016-07-12 18:40:06,605 [ERROR] TypeError: 140 lines
+2016-07-12 18:40:10,720 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-12 18:40:10,720 [ERROR] TypeError: 176 lines
+2016-07-12 18:40:10,720 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",56]],"from_uin":1605286128,"group_code":1605286128,"msg_id":15555,"msg_type":0,"send_uin":914225125,"time":1468319914,"to_uin":659030105}}],"retcode":0}
+
