@@ -498,3 +498,84 @@
 2016-07-12 18:40:10,720 [ERROR] TypeError: 176 lines
 2016-07-12 18:40:10,720 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",56]],"from_uin":1605286128,"group_code":1605286128,"msg_id":15555,"msg_type":0,"send_uin":914225125,"time":1468319914,"to_uin":659030105}}],"retcode":0}
 
+2016-07-12 19:30:37,651 [ERROR] 'ascii' codec can't encode characters in position 0-24: ordinal not in range(128)
+2016-07-12 19:30:37,651 [ERROR] TypeError: 140 lines
+2016-07-12 19:31:02,299 [ERROR] 'ascii' codec can't encode characters in position 0-6: ordinal not in range(128)
+2016-07-12 19:31:02,299 [ERROR] TypeError: 140 lines
+2016-07-12 19:32:27,585 [ERROR] 'ascii' codec can't encode characters in position 0-10: ordinal not in range(128)
+2016-07-12 19:32:27,586 [ERROR] TypeError: 140 lines
+2016-07-12 19:34:29,549 [ERROR] 'ascii' codec can't encode characters in position 0-4: ordinal not in range(128)
+2016-07-12 19:34:29,551 [ERROR] TypeError: 140 lines
+2016-07-12 19:38:22,983 [ERROR] 'ascii' codec can't encode characters in position 0-6: ordinal not in range(128)
+2016-07-12 19:38:22,984 [ERROR] TypeError: 140 lines
+2016-07-12 19:39:55,573 [ERROR] 'ascii' codec can't encode characters in position 17-24: ordinal not in range(128)
+2016-07-12 19:39:55,575 [ERROR] TypeError: 140 lines
+2016-07-12 19:41:09,082 [ERROR] 'ascii' codec can't encode characters in position 0-3: ordinal not in range(128)
+2016-07-12 19:41:09,084 [ERROR] TypeError: 140 lines
+2016-07-12 19:41:24,358 [ERROR] 'ascii' codec can't encode characters in position 0-7: ordinal not in range(128)
+2016-07-12 19:41:24,359 [ERROR] TypeError: 140 lines
+2016-07-12 19:41:35,279 [ERROR] 'ascii' codec can't encode characters in position 0-7: ordinal not in range(128)
+2016-07-12 19:41:35,279 [ERROR] TypeError: 140 lines
+2016-07-12 19:43:23,752 [ERROR] 'ascii' codec can't encode characters in position 0-10: ordinal not in range(128)
+2016-07-12 19:43:23,753 [ERROR] TypeError: 140 lines
+2016-07-12 19:43:27,861 [ERROR] 'ascii' codec can't encode character u'\u5230' in position 2: ordinal not in range(128)
+2016-07-12 19:43:27,861 [ERROR] TypeError: 140 lines
+2016-07-12 19:43:31,959 [ERROR] 'ascii' codec can't encode characters in position 0-13: ordinal not in range(128)
+2016-07-12 19:43:31,960 [ERROR] TypeError: 140 lines
+2016-07-12 19:43:46,128 [ERROR] 'ascii' codec can't encode characters in position 0-4: ordinal not in range(128)
+2016-07-12 19:43:46,128 [ERROR] TypeError: 140 lines
+2016-07-12 19:44:26,809 [ERROR] 'ascii' codec can't encode characters in position 0-2: ordinal not in range(128)
+2016-07-12 19:44:26,812 [ERROR] TypeError: 140 lines
+2016-07-12 19:44:39,953 [ERROR] 'ascii' codec can't encode characters in position 0-1: ordinal not in range(128)
+2016-07-12 19:44:39,953 [ERROR] TypeError: 140 lines
+2016-07-12 21:29:47,019 [WARNING] Cookies_file time out
+2016-07-12 21:44:51,496 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-12 21:44:51,497 [ERROR] TypeError: 176 lines
+2016-07-12 21:44:51,497 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",56]],"from_uin":1605286128,"group_code":1605286128,"msg_id":15954,"msg_type":0,"send_uin":914225125,"time":1468331009,"to_uin":659030105}}],"retcode":0}
+
+2016-07-12 21:45:50,568 [ERROR] 'ascii' codec can't encode characters in position 0-7: ordinal not in range(128)
+2016-07-12 21:45:50,569 [ERROR] TypeError: 140 lines
+2016-07-12 21:45:57,841 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-12 21:45:57,841 [ERROR] TypeError: 176 lines
+2016-07-12 21:45:57,842 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",46]],"from_uin":1605286128,"group_code":1605286128,"msg_id":15589,"msg_type":0,"send_uin":1656689949,"time":1468331077,"to_uin":659030105}}],"retcode":0}
+
+2016-07-12 21:46:18,009 [ERROR] 'ascii' codec can't encode characters in position 0-7: ordinal not in range(128)
+2016-07-12 21:46:18,010 [ERROR] TypeError: 140 lines
+2016-07-12 21:47:15,431 [ERROR] 'ascii' codec can't encode characters in position 0-7: ordinal not in range(128)
+2016-07-12 21:47:15,434 [ERROR] TypeError: 140 lines
+2016-07-12 21:47:24,134 [ERROR] 'ascii' codec can't encode characters in position 0-7: ordinal not in range(128)
+2016-07-12 21:47:24,135 [ERROR] TypeError: 140 lines
+2016-07-12 21:48:01,760 [ERROR] 'ascii' codec can't encode characters in position 0-7: ordinal not in range(128)
+2016-07-12 21:48:01,762 [ERROR] TypeError: 140 lines
+2016-07-12 21:49:42,555 [ERROR] 'ascii' codec can't decode byte 0xe8 in position 0: ordinal not in range(128)
+2016-07-12 21:49:42,555 [ERROR] TypeError: 140 lines
+2016-07-12 21:50:01,148 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-12 21:50:01,150 [ERROR] TypeError: 176 lines
+2016-07-12 21:50:01,150 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",97],"我用的村里的"],"from_uin":1605286128,"group_code":1605286128,"msg_id":6491,"msg_type":0,"send_uin":1764969260,"time":1468331320,"to_uin":659030105}}],"retcode":0}
+
+2016-07-12 21:51:32,836 [ERROR] 'ascii' codec can't decode byte 0xe8 in position 0: ordinal not in range(128)
+2016-07-12 21:51:32,838 [ERROR] TypeError: 140 lines
+2016-07-12 21:51:51,947 [ERROR] 'ascii' codec can't decode byte 0xe8 in position 0: ordinal not in range(128)
+2016-07-12 21:51:51,948 [ERROR] TypeError: 140 lines
+2016-07-12 21:52:24,723 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-12 21:52:24,723 [ERROR] TypeError: 176 lines
+2016-07-12 21:52:24,723 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",56]],"from_uin":1605286128,"group_code":1605286128,"msg_id":4549,"msg_type":0,"send_uin":2489484757,"time":1468331464,"to_uin":659030105}}],"retcode":0}
+
+2016-07-12 21:54:40,664 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-12 21:54:40,664 [ERROR] TypeError: 176 lines
+2016-07-12 21:54:40,664 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",73]],"from_uin":1605286128,"group_code":1605286128,"msg_id":16016,"msg_type":0,"send_uin":914225125,"time":1468331600,"to_uin":659030105}}],"retcode":0}
+
+2016-07-12 21:55:10,151 [ERROR] 'ascii' codec can't decode byte 0xe8 in position 0: ordinal not in range(128)
+2016-07-12 21:55:10,153 [ERROR] TypeError: 140 lines
+2016-07-12 21:58:33,459 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-12 21:58:33,460 [ERROR] TypeError: 176 lines
+2016-07-12 21:58:33,460 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",56]],"from_uin":1605286128,"group_code":1605286128,"msg_id":16049,"msg_type":0,"send_uin":914225125,"time":1468331833,"to_uin":659030105}}],"retcode":0}
+
+2016-07-12 22:04:06,803 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-12 22:04:06,805 [ERROR] TypeError: 176 lines
+2016-07-12 22:04:06,805 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",108]],"from_uin":1605286128,"group_code":1605286128,"msg_id":21648,"msg_type":0,"send_uin":935247278,"time":1468332166,"to_uin":659030105}}],"retcode":0}
+
+2016-07-12 22:07:04,148 [ERROR] coercing to Unicode: need string or buffer, list found
+2016-07-12 22:07:04,148 [ERROR] TypeError: 176 lines
+2016-07-12 22:07:04,148 [ERROR] {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],["face",97]],"from_uin":1605286128,"group_code":1605286128,"msg_id":21652,"msg_type":0,"send_uin":935247278,"time":1468332343,"to_uin":659030105}}],"retcode":0}
+

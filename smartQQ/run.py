@@ -1,4 +1,4 @@
-# coding:utf8
+#coding:utf8
 import re
 import sys
 import random
@@ -166,8 +166,11 @@ class SmartQQ:
                             if '/awk/' in group_name:
                                 print '###########################TEST###########################'
                                 print group_name, from_uin
-                                if num % 6 == 0:
-                                    print self.send_messages(unicode(words)),
+                                if isinstance(words, list):
+                                    print type(words)
+                                    print 172, words
+                                elif re.findall(r'[Rr!]', words):
+                                    print self.send_messages(from_uin, '貌似有人在召唤我! 关键词\\< %s \\> '% words.encode('utf8', 'ignore')),
                                 num += 1
                                 print self.groupMember[from_uin][send_uid] + ":" + words
                             else:
@@ -198,13 +201,16 @@ class SmartQQ:
         """
         Send messages
         """
-        data = ((
-            'r',
-            '{{"group_uin":{0}, "face":564,"content":"[\\"{4}\\",[\\"font\\",{{\\"name\\":\\"Arial\\",\\"size\\":\\"10\\",\\"style\\":[0,0,0],\\"color\\":\\"000000\\"}}]]","clientid":{1},"msg_id":{2},"psessionid":"{3}"}}'.format(
-                 from_uin, self.clientid, random.randint(1, 100000), self.psessionid, messages)),
-                ('clientid', self.clientid),
-                ('psessionid', self.psessionid))
+        data = (
+            ('r',
+             '{{"group_uin":{0}, "face":564,"content":"[\\"{4}\\",[\\"font\\",{{\\"name\\":\\"Arial\\",\\"size\\":\\"10\\",\\"style\\":[0,0,0],\\"color\\":\\"000000\\"}}]]","clientid":{1},"msg_id":{2},"psessionid":"{3}"}}'.format(
+                 from_uin, self.clientid, random.randint(0,1000), self.psessionid, messages)),
+            ('clientid', self.clientid),
+            ('psessionid', self.psessionid)
+        )
+        # print data
         result = self.url_request.post(self.url_dic['send_qun'], data=data).text
+        # print self.url_request.post('https://httpbin.org/post', verify=True, data=dict(data)).text
         return result
 
     def get_group_info(self, groupid):
