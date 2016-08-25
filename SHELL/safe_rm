@@ -1,10 +1,12 @@
 #!/bin/bash
 ###################################################
-#   安全删除					  #
+#   安全删除                                      #
 #   需要手动把原 /bin/rm 改名成 /bin/unsafe_rm    #
 #   把脚本改名成 /bin/rm 替代系统删除             #
+#   建议大家把系统对rm的别名去掉: unalias rm      #
 ###################################################
 FILE_LIST=$@
+PARA_NUM=$(($#-1))
 SPATH=`pwd`
 DATE=`/bin/date +"%Y-%m-%d"`
 LOGFILE='/tmp/.stash/delete.log'
@@ -13,7 +15,6 @@ RUBBISH_PATH="/tmp/.stash/${DATE}"
 
 # 防删根
 grep -qP '^/$| /root | /proc | /opt | /usr | /etc ' <<< ${FILE_LIST}&& { echo -e "\e[31m此列表包含根目录(${RM_FILE}), 操作终止\e[0m"; exit 9; }
-
 
 [ -e ${RUBBISH_PATH} ] || { /bin/mkdir -p ${RUBBISH_PATH} && /bin/chmod 777 ${RUBBISH_PATH} && echo "`date +'%Y-%m-%d %H:%M:%S'` 创建目录${RUBBISH_PATH}成功" | tee -a ${LOGFILE};}
 for RM_FILE in ${FILE_LIST}
@@ -24,9 +25,18 @@ do
 	then
 		echo -e "\e[31m此列表包含根目录(${RM_FILE}), 操作终止\e[0m"
 		exit 9
+
+	# 检查系统rm别名
+	elif [[ ${RM_FILE} =~ ^- ]]
+	then
+		[ -e ${RM_FILE} ] || { echo "`date +'%Y-%m-%d %H:%M:%S'` ${RM_FILE} 怀疑文件是参数;不处理" >>  ${LOGFILE}; }
+		let PARA_NUM--
+		continue
+	
 	fi
-	[ -z ${RM_FILE} ] && { echo -e "\e[31m[错误]: 缺少文件名\n${USAGE}\e[0m" ; exit 9; }
-	[ -e ${RM_FILE} ] || { echo -e "\e[31m[错误]: File not found\e[0m"; exit 9; } 
+	let PARA_NUM++
+	[ -z ${RM_FILE} ] || [ ${PARA_NUM} -eq 0 ] && { echo -e "\e[31m[错误]: 缺少文件名或者有多余(alias)参数\n${USAGE}\e[0m" ; exit 9; }
+	[ -e ${RM_FILE} ] || { echo -e "\e[31m[错误]: File ${RM_FILE} not found\e[0m"; exit 9; } 
 
 	echo -e "`date +'%Y-%m-%d %H:%M:%S'` 准备删除文件 \e[31;1m${RM_FILE}\e[0m" | tee -a ${LOGFILE}
 	
@@ -68,4 +78,4 @@ do
 		echo "`date +'%Y-%m-%d %H:%M:%S'` 超过2G直接删除源文件文件 ${RM_FILE} "| tee -a ${LOGFILE}
         fi
 done 
-
+[ ${PARA_NUM} -lt 0 ] && echo -e "\e[31m[错误]: 缺少文件名 或者有多余(alias)参数 \e[0m" 
