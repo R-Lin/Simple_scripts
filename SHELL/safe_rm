@@ -1,0 +1,71 @@
+#!/bin/bash
+###################################################
+#   安全删除					  #
+#   需要手动把原 /bin/rm 改名成 /bin/unsafe_rm    #
+#   把脚本改名成 /bin/rm 替代系统删除             #
+###################################################
+FILE_LIST=$@
+SPATH=`pwd`
+DATE=`/bin/date +"%Y-%m-%d"`
+LOGFILE='/tmp/.stash/delete.log'
+USAGE="[用法]: rm file_path"
+RUBBISH_PATH="/tmp/.stash/${DATE}"
+
+# 防删根
+grep -qP '^/$| /root | /proc | /opt | /usr | /etc ' <<< ${FILE_LIST}&& { echo -e "\e[31m此列表包含根目录(${RM_FILE}), 操作终止\e[0m"; exit 9; }
+
+
+[ -e ${RUBBISH_PATH} ] || { /bin/mkdir -p ${RUBBISH_PATH} && /bin/chmod 777 ${RUBBISH_PATH} && echo "`date +'%Y-%m-%d %H:%M:%S'` 创建目录${RUBBISH_PATH}成功" | tee -a ${LOGFILE};}
+for RM_FILE in ${FILE_LIST}
+do
+	TRY_TIME=0
+	# 再次防删根
+	if [ ${RM_FILE} == '/' ] 
+	then
+		echo -e "\e[31m此列表包含根目录(${RM_FILE}), 操作终止\e[0m"
+		exit 9
+	fi
+	[ -z ${RM_FILE} ] && { echo -e "\e[31m[错误]: 缺少文件名\n${USAGE}\e[0m" ; exit 9; }
+	[ -e ${RM_FILE} ] || { echo -e "\e[31m[错误]: File not found\e[0m"; exit 9; } 
+
+	echo -e "`date +'%Y-%m-%d %H:%M:%S'` 准备删除文件 \e[31;1m${RM_FILE}\e[0m" | tee -a ${LOGFILE}
+	
+	FILE_SIZE=`/usr/bin/du -sb ${RM_FILE} | /bin/awk 'NF=1'`
+	BASENAME=`/bin/basename ${RM_FILE}`
+	RENAME="${BASENAME}_`/bin/date +%s`"
+	TARGET_NAME=${RUBBISH_PATH}/${RENAME}
+	
+	if [ ${FILE_SIZE} -lt 2097152000 ] # 小于2G全部先移动
+	then
+		/bin/mv ${RM_FILE}  ${TARGET_NAME}
+	        if [ ${FILE_SIZE} -ge 1048576000 ] && [ ${FILE_SIZE} -lt 2097152000 ] # 大于1G 小于2G, 询问是否压缩
+        	then
+			echo -e "\e[31;1;5m虽然你不要我了, 但我还是爱你的! 小于2G文件可以找回哦!!! \e[0m"
+                	read -p  "确认是否压缩:『 ${RM_FILE} 』? (Yes/n) " is_comp
+                	if [ x${is_comp} == 'xYes' ]
+                	then
+				cd ${RUBBISH_PATH}	# 进入tmp相应目录压缩
+				echo "`date +'%Y-%m-%d %H:%M:%S'` 压缩并删除源文件文件 ${RENAME} "| tee -a ${LOGFILE}
+                        	(/bin/tar -zcvf ${TARGET_NAME}.tar.gz ${RENAME} && /bin/unsafe_rm -r ${RENAME}) &>/dev/null &
+				cd ${SPATH}
+                	fi
+		fi
+		echo "`date +'%Y-%m-%d %H:%M:%S'` 移动文件 ${RM_FILE} 到回收站 ${TARGET_NAME}" | tee -a  ${LOGFILE}
+	else
+        	while [ ${TRY_TIME} -lt 3 ] 
+        	do
+        	        echo -e "\e[31;1;5m醒醒!!! 删错要炸啦!!! 扣工资啦!!! \e[0m"
+        	        echo -ne "确认删除文件: \e[33;1;41m${RM_FILE}\e[0m (Yes/n)  "
+        	        read  answer
+        	        if [ x$answer != "xYes" ]
+        	        then
+        	                echo "`date +'%Y-%m-%d %H:%M:%S'` 取消删除文件 ${RM_FILE},脚本退出" | tee -a ${LOGFILE}
+        	                exit 1
+        	        fi  
+        	        let TRY_TIME++
+        	done
+        	/bin/unsafe_rm ${RM_FILE}
+		echo "`date +'%Y-%m-%d %H:%M:%S'` 超过2G直接删除源文件文件 ${RM_FILE} "| tee -a ${LOGFILE}
+        fi
+done 
+
