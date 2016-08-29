@@ -14,8 +14,10 @@ USAGE="[用法]: rm file_path"
 RUBBISH_PATH="/tmp/.stash/${DATE}"
 
 # 防删根
-grep -qP '^/$| /root | /proc | /opt | /usr | /etc ' <<< ${FILE_LIST}&& { echo -e "\e[31m此列表包含根目录(${RM_FILE}), 操作终止\e[0m"; exit 9; }
+grep -qP '^/$| /root | /proc | /opt | /usr | /etc ' <<< ${FILE_LIST}&& { echo -e "\e[31m此列表包含根目录(${RM_FILE}), 操作终止\e[0m"; exit 0; }
 
+# 如果是编译脚本调用 忽略所有输出
+[ x`ps -fe | awk -vppid=${PPID} '$2==ppid&&$0~/config/{print 1}'` == x1 ] && FORCE="True"
 [ -e ${RUBBISH_PATH} ] || { /bin/mkdir -p ${RUBBISH_PATH} && /bin/chmod 777 ${RUBBISH_PATH} && echo "`date +'%Y-%m-%d %H:%M:%S'` 创建目录${RUBBISH_PATH}成功" | tee -a ${LOGFILE};}
 for RM_FILE in ${FILE_LIST}
 do
@@ -24,31 +26,41 @@ do
 	if [ ${RM_FILE} == '/' ] 
 	then
 		echo -e "\e[31m此列表包含根目录(${RM_FILE}), 操作终止\e[0m"
-		exit 9
+		exit 0
 
 	# 检查系统rm别名
 	elif [[ ${RM_FILE} =~ ^- ]]
 	then
+        if [ ${RM_FILE} == "-f" ]
+        then
+            FORCE="True"
+        fi
 		[ -e ${RM_FILE} ] || { echo "`date +'%Y-%m-%d %H:%M:%S'` ${RM_FILE} 怀疑文件是参数;不处理" >>  ${LOGFILE}; }
 		let PARA_NUM--
 		continue
 	
 	fi
 	let PARA_NUM++
-	[ -z ${RM_FILE} ] || [ ${PARA_NUM} -eq 0 ] && { echo -e "\e[31m[错误]: 缺少文件名或者有多余(alias)参数\n${USAGE}\e[0m" ; exit 9; }
-	[ -e ${RM_FILE} ] || { echo -e "\e[31m[错误]: File ${RM_FILE} not found\e[0m"; exit 9; } 
-
-	echo -e "`date +'%Y-%m-%d %H:%M:%S'` 准备删除文件 \e[31;1m${RM_FILE}\e[0m" | tee -a ${LOGFILE}
+	[ -z ${RM_FILE} ] || [ ${PARA_NUM} -eq 0 ] && { echo -e "\e[31m[错误]: 缺少文件名或者有多余(alias)参数\n${USAGE}\e[0m" ; exit 0; }
+    if [ ! -e ${RM_FILE} ]
+    then 
+        if [ x${FORCE} != x"True" ]
+        then 
+            echo -e "\e[31m[错误]: File ${RM_FILE} not found\e[0m";
+        fi
+        continue 
+    fi 
+	echo -e "`date +'%Y-%m-%d %H:%M:%S'` 准备删除文件 \e[31;1m${RM_FILE}\e[0m"  >> ${LOGFILE}
 	
 	FILE_SIZE=`/usr/bin/du -sb ${RM_FILE} | /bin/awk 'NF=1'`
 	BASENAME=`/bin/basename ${RM_FILE}`
 	RENAME="${BASENAME}_`/bin/date +%s`"
 	TARGET_NAME=${RUBBISH_PATH}/${RENAME}
 	
-	if [ ${FILE_SIZE} -lt 2097152000 ] # 小于2G全部先移动
+	if [ ${FILE_SIZE} -lt 2007152000 ] # 小于2G全部先移动
 	then
 		/bin/mv ${RM_FILE}  ${TARGET_NAME}
-	        if [ ${FILE_SIZE} -ge 1048576000 ] && [ ${FILE_SIZE} -lt 2097152000 ] # 大于1G 小于2G, 询问是否压缩
+	        if [ ${FILE_SIZE} -ge 1048576000 ] && [ ${FILE_SIZE} -lt 2007152000 ] # 大于1G 小于2G, 询问是否压缩
         	then
 			echo -e "\e[31;1;5m虽然你不要我了, 但我还是爱你的! 小于2G文件可以找回哦!!! \e[0m"
                 	read -p  "确认是否压缩:『 ${RM_FILE} 』? (Yes/n) " is_comp
@@ -60,7 +72,7 @@ do
 				cd ${SPATH}
                 	fi
 		fi
-		echo "`date +'%Y-%m-%d %H:%M:%S'` 移动文件 ${RM_FILE} 到回收站 ${TARGET_NAME}" | tee -a  ${LOGFILE}
+		echo "`date +'%Y-%m-%d %H:%M:%S'` 移动文件 ${RM_FILE} 到回收站 ${TARGET_NAME}" >>  ${LOGFILE}
 	else
         	while [ ${TRY_TIME} -lt 3 ] 
         	do
@@ -70,7 +82,7 @@ do
         	        if [ x$answer != "xYes" ]
         	        then
         	                echo "`date +'%Y-%m-%d %H:%M:%S'` 取消删除文件 ${RM_FILE},脚本退出" | tee -a ${LOGFILE}
-        	                exit 1
+        	                exit 0
         	        fi  
         	        let TRY_TIME++
         	done
@@ -78,4 +90,5 @@ do
 		echo "`date +'%Y-%m-%d %H:%M:%S'` 超过2G直接删除源文件文件 ${RM_FILE} "| tee -a ${LOGFILE}
         fi
 done 
-[ ${PARA_NUM} -lt 0 ] && echo -e "\e[31m[错误]: 缺少文件名 或者有多余(alias)参数 \e[0m" 
+
+[ ${PARA_NUM} -lt 0 ] && echo -e "\e[31m[错误]: 缺少文件名 或者有多余(alias)参数 \e[0m" || exit 0
