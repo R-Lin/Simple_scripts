@@ -56,13 +56,13 @@ class WeiboSpider(object):
             try:
                 for content_flag in self.expand_list:
                     if content_flag in weibo_each:
-                        tmp_result = '\t'.join(
+                        tmp_result = ' \t'.join(
                             re.findall(self.pattern_expand_compile[content_flag], weibo_each)[0]
                         ) + '(From Expand %s)\n' % content_flag
                         flag = 1
                         break
                 if not flag:
-                    tmp_result = '\t'.join(re.findall(self.pattern_expand_compile['common'], weibo_each)[0]) + '\n'
+                    tmp_result = ' \t'.join(re.findall(self.pattern_expand_compile['common'], weibo_each)[0]) + '\n'
             except IndexError:
                 with open('false.log', 'a') as fw:
                     fw.write(weibo_each + '\n')
@@ -93,11 +93,11 @@ if __name__ == '__main__':
 
         result_list += record_list
         uniq_result_list = set(result_list)
-        with open(filename, 'w') as f1, open('run.log', 'w') as f2:
+        with open(filename, 'w') as f1, open('run.log', 'a') as f2:
             for line in result_list:
                 if line in uniq_result_list:
                     f1.write(line)
                     uniq_result_list.remove(line)
-            f2.write('%s Result had update on %s' % (time.strftime('%Y-%m-%d %H:%M:%S', time.localtime()), filename))
-        print '%s Result had update on %s' % (time.strftime('%Y-%m-%d %H:%M:%S', time.localtime()), filename)
+            f2.write('%s Result had update on %s\n' % (time.strftime('%Y-%m-%d %H:%M:%S', time.localtime()), filename))
+        print '%s Result had update on %s\n' % (time.strftime('%Y-%m-%d %H:%M:%S', time.localtime()), filename)
 
