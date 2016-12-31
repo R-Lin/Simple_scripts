@@ -95,6 +95,14 @@ if __name__ == '__main__':
         with open(filename, 'w') as f1, open(run_log, 'a') as f2:
             for line in result_list:
                 f1.write(line)
-            f2.write('%s Result had update on %s\n' % (time.strftime('%Y-%m-%d %H:%M:%S', time.localtime()), filename))
-        print '%s Result had update on %s\n' % (time.strftime('%Y-%m-%d %H:%M:%S', time.localtime()), filename)
+            f2.write('%s Result had update on %s write_line_number: %s\n' % (
+                time.strftime('%Y-%m-%d %H:%M:%S', time.localtime()),
+                filename,
+                len(result_list)
+            ))
+        print '%s Result had update on %s write_line_number: %s\n' % (
+                time.strftime('%Y-%m-%d %H:%M:%S', time.localtime()),
+                filename,
+                len(result_list)
+            )
 
