@@ -64,7 +64,7 @@ class WeiboSpider(object):
                 if not flag:
                     tmp_result = ' \t'.join(re.findall(self.pattern_expand_compile['common'], weibo_each)[0]) + '\n'
             except IndexError:
-                with open('false.log', 'a') as fw:
+                with open(os.path.join('weibo_spider_log','false.log'), 'a') as fw:
                     fw.write(weibo_each + '\n')
             else:
                 result.append(re.sub(r'\s{4,}', '', tmp_result.replace(r'\\/', '')))
@@ -78,13 +78,18 @@ if __name__ == '__main__':
         'http://weibo.com/u/5371503934?profile_ftype=1&is_all=1#_0'
     ]
     ws = WeiboSpider()
+    file_store_dir = 'weibo_spider_log'
+    run_log = os.path.join(file_store_dir, 'run.log')
+    if not os.path.exists(file_store_dir):
+        os.mkdir(file_store_dir)
+
     for url in url_list:
         result_list = ws.start(url)
         record_list = []
         tmp_name = ''
         if '?' in url:
             tmp_name = re.findall(r'([^/]+)(?=\?)', url)
-        filename = tmp_name[0] + '.txt' if tmp_name else 'weibo_result.txt'
+        filename = os.path.join(file_store_dir, tmp_name[0] + '.txt' if tmp_name else 'weibo_result.txt')
 
         if os.path.exists(filename):
             # 读取老文件记录
@@ -93,7 +98,7 @@ if __name__ == '__main__':
 
         result_list += record_list
         uniq_result_list = set(result_list)
-        with open(filename, 'w') as f1, open('run.log', 'a') as f2:
+        with open(filename, 'w') as f1, open(run_log, 'a') as f2:
             for line in result_list:
                 if line in uniq_result_list:
                     f1.write(line)
