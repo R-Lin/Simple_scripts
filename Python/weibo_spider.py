@@ -6,8 +6,7 @@ import time
 
 
 class WeiboSpider(object):
-    def __init__(self, result_reverse=True):
-        self.reverse = result_reverse
+    def __init__(self):
         self.req = requests.session()
         self.expand_list = ['feed_list_reason']
         self.pattern_expand_compile = {}
@@ -19,18 +18,12 @@ class WeiboSpider(object):
             'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
             'Accept-Encoding': 'gzip, deflate, sdch',
             'Accept-Language': 'zh-CN,zh;q=0.8',
+            'Cache-Control': 'max-age=0',
             'Connection': 'keep-alive',
+            'Cookie': 'SINAGLOBAL=8941961474304.336.1468425131019; wvr=6; YF-Page-G0=e3ff5d70990110a1418af5c145dfe402; SCF=Av0bboGkPJIQlP04diBpYdATRux4ZqjtsBgE8FdiFEwVrXjh9YCW1bDHm-mRsLYPB7Hh_O6pPYhtojrGE2EQISI.; SUB=_2A251Y7RUDeRxGedG7FEY9C7EwjuIHXVWGKKcrDV8PUNbmtBeLWvBkW8MEJ5truSQrwNSbA3qtsXai19lBg..; SUBP=0033WrSXqPxfM725Ws9jqgMF55529P9D9WF_k7IEwzXZLX8h6B4Sp22I5JpX5KMhUgL.Fo2RS0e4Sh5R1KM2dJLoIpUki--ciKL8iK.NqJibi--ci-ihi-24P7tt; SUHB=0wnECWt_828SvZ; ALF=1514731395; SSOLoginState=1483195396; _s_tentry=login.sina.com.cn; UOR=www.dilidili.com,widget.weibo.com,login.sina.com.cn; Apache=808014887079.5511.1483195445905; ULV=1483195446339:32:9:7:808014887079.5511.1483195445905:1483161129581; YF-V5-G0=55f24dd64fe9a2e1eff80675fb41718d',
             'Host': 'weibo.com',
-            'Referer': 'http://weibo.com/wu2198?refer_flag=0000015010_&from=feed&loc=nickname&is_all=1',
             'Upgrade-Insecure-Requests': '1',
             'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36',
-            'Cookie': 'SINAGLOBAL=8941961474304.336.1468425131019; wvr=6; YF-V5-G0=2da76c0c227d473404dd0efbaccd41ac; '
-                      'SCF=Av0bboGkPJIQlP04diBpYdATRux4ZqjtsBgE8FdiFEwVgW3vAGH6e2s90zIRtWW5n4W6nfcKRwI_dr336Lbz8jY.; '
-                      'SUB=_2A251YhSqDeRxGedG7FEY9C7EwjuIHXVWFgFirDV8PUNbmtBeLVPakW8cp40bbBwMZhs1woZPcoZS8ZJ_7g..; '
-                      'SUBP=0033WrSXqPxfM725Ws9jqgMF55529P9D9WF_k7IEwzXZLX8h6B4Sp22I5JpX5KMhUgL.Fo2RS0e4Sh5R1KM2dJLoIpUki--ciKL8iK.NqJibi--ci-ihi-24P7tt;'
-                      ' SUHB=05iLV9y7I4PP5V; ALF=1514641528; SSOLoginState=1483105530; YF-Page-G0=f27a36a453e657c2f4af998bd4de9419;'
-                      ' _s_tentry=login.sina.com.cn; UOR=www.dilidili.com,widget.weibo.com,login.sina.com.cn;'
-                      ' Apache=4540898540504.192.1483105611969; ULV=1483105612430:29:6:4:4540898540504.192.1483105611969:1483018706967'
 
         }
         self.req.headers.update(self.cookies)
@@ -68,9 +61,7 @@ class WeiboSpider(object):
                 with open(os.path.join('weibo_spider_log','false.log'), 'a') as fw:
                     fw.write(weibo_each + '\n')
             else:
-                result.append(re.sub(r'\s{4,}', '', tmp_result.replace(r'\\/', '')))
-        if not self.reverse:
-            return result
+                result.append(re.sub(r'\s{6,}', '  ', tmp_result.replace(r'\\/', '')))
         return result[::-1]
 
 if __name__ == '__main__':
@@ -78,7 +69,7 @@ if __name__ == '__main__':
     # Example:
     url_list = [
         'http://weibo.com/u/1831326341?profile_ftype=1&is_all=1#_0',
-        'http://weibo.com/u/5371503934?profile_ftype=1&is_all=1#_0'
+        'http://weibo.com/u/5708545231?profile_ftype=1&is_all=1#_0'
     ]
     ws = WeiboSpider()
     file_store_dir = 'weibo_spider_log'
@@ -93,19 +84,17 @@ if __name__ == '__main__':
         if '?' in url:
             tmp_name = re.findall(r'([^/]+)(?=\?)', url)
         filename = os.path.join(file_store_dir, tmp_name[0] + '.txt' if tmp_name else 'weibo_result.txt')
-
         if os.path.exists(filename):
             # 读取老文件记录
             with open(filename) as f:
                 record_list = f.readlines()
-
-        result_list += record_list
-        uniq_result_list = set(result_list)
+            for _ in record_list:
+                if _ in result_list:
+                    result_list.remove(_)
+        result_list = record_list + result_list
         with open(filename, 'w') as f1, open(run_log, 'a') as f2:
             for line in result_list:
-                if line in uniq_result_list:
-                    f1.write(line)
-                    uniq_result_list.remove(line)
+                f1.write(line)
             f2.write('%s Result had update on %s\n' % (time.strftime('%Y-%m-%d %H:%M:%S', time.localtime()), filename))
         print '%s Result had update on %s\n' % (time.strftime('%Y-%m-%d %H:%M:%S', time.localtime()), filename)
 
