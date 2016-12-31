@@ -6,7 +6,8 @@ import time
 
 
 class WeiboSpider(object):
-    def __init__(self):
+    def __init__(self, result_reverse=True):
+        self.reverse = result_reverse
         self.req = requests.session()
         self.expand_list = ['feed_list_reason']
         self.pattern_expand_compile = {}
@@ -56,19 +57,21 @@ class WeiboSpider(object):
             try:
                 for content_flag in self.expand_list:
                     if content_flag in weibo_each:
-                        tmp_result = ' \t'.join(
+                        tmp_result = '\t'.join(
                             re.findall(self.pattern_expand_compile[content_flag], weibo_each)[0]
                         ) + '(From Expand %s)\n' % content_flag
                         flag = 1
                         break
                 if not flag:
-                    tmp_result = ' \t'.join(re.findall(self.pattern_expand_compile['common'], weibo_each)[0]) + '\n'
+                    tmp_result = '\t'.join(re.findall(self.pattern_expand_compile['common'], weibo_each)[0]) + '\n'
             except IndexError:
                 with open(os.path.join('weibo_spider_log','false.log'), 'a') as fw:
                     fw.write(weibo_each + '\n')
             else:
                 result.append(re.sub(r'\s{4,}', '', tmp_result.replace(r'\\/', '')))
-        return result
+        if not self.reverse:
+            return result
+        return result[::-1]
 
 if __name__ == '__main__':
     # 最好就是链接获取: 对方微博-> 主页-> 全部微博
