@@ -72,8 +72,9 @@ class WeiboSpider(object):
 
 if __name__ == '__main__':
     # 最好就是链接获取: 对方微博-> 主页-> 全部微博
+	# Example
     url_list = [
-        'http://weibo.com/u/1831326341?profile_ftype=1&is_all=1#_0',
+        'http://weibo.com/u/5584886804?profile_ftype=1&is_all=1#_0',
         'http://weibo.com/u/5371503934?profile_ftype=1&is_all=1#_0'
     ]
     ws = WeiboSpider()
