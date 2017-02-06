@@ -15,7 +15,7 @@ RUBBISH_PATH="/tmp/.stash/${DATE}"
 
 # 防删根
 grep -qP '^/$| /root | /proc | /opt | /usr | /etc ' <<< ${FILE_LIST}&& { echo -e "\e[31m此列表包含根目录(${RM_FILE}), 操作终止\e[0m"; exit 0; }
-
+[ -e ${LOGFILE} ] || { touch ${LOGFILE} && chmod 777 ${LOGFILE}; }
 # 如果是编译脚本调用 忽略所有输出
 [ x`ps -fe | awk -vppid=${PPID} '$2==ppid&&$0~/config/{print 1}'` == x1 ] && FORCE="True"
 [ -e ${RUBBISH_PATH} ] || { /bin/mkdir -p ${RUBBISH_PATH} && /bin/chmod 777 ${RUBBISH_PATH} && echo "`date +'%Y-%m-%d %H:%M:%S'` 创建目录${RUBBISH_PATH}成功" | tee -a ${LOGFILE};}
@@ -86,7 +86,7 @@ do
         	        fi  
         	        let TRY_TIME++
         	done
-        	/bin/unsafe_rm ${RM_FILE}
+        	/bin/unsafe_rm -fr ${RM_FILE}
 		echo "`date +'%Y-%m-%d %H:%M:%S'` 超过2G直接删除源文件文件 ${RM_FILE} "| tee -a ${LOGFILE}
         fi
 done 
