@@ -7,7 +7,7 @@
 ###################################################
 FILE_LIST=$@
 PARA_NUM=$(($#-1))
-SPATH=`pwd`
+SPATH=$PWD
 DATE=`/bin/date +"%Y-%m-%d"`
 LOGFILE='/tmp/.stash/delete.log'
 USAGE="[用法]: rm file_path"

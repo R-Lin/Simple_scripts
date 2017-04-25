@@ -7,6 +7,7 @@ import json
 import sys
 import logging
 
+
 class Mylog:
     def __init__(self, log_path):
         self.logger = logging.getLogger('Mylogger')
@@ -14,9 +15,11 @@ class Mylog:
         log_format = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
         fh = logging.FileHandler(log_path)
         stream = logging.StreamHandler()
+
         # define log level
         fh.setLevel(logging.INFO)
         stream.setLevel(logging.DEBUG)
+
         # define log format
         fh.setFormatter(log_format)
         stream.setFormatter(log_format)
@@ -27,7 +30,7 @@ class Mylog:
         return self.logger
 
 
-class Zabbix_wechat:
+class ZabbixWechat:
     """
     Report the Zabbix Warning through Wechat
     """
@@ -37,13 +40,14 @@ class Zabbix_wechat:
         self.logger = Mylog(self.log_file).log()
         self.apiUrl_dic = {
             'token': None,
-            'getToken': 'https://qyapi.weixin.qq.com/cgi-bin/gettoken',
+            'get_token': 'https://qyapi.weixin.qq.com/cgi-bin/get_token',
             'sendMess': 'https://qyapi.weixin.qq.com/cgi-bin/message/send',
-            'corpid': '项目id',
-            'secret': '加密字符串'
+            'getDepartment': 'https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=%s',
+            'corpid': 'wx23ef45bea127db50',
+            'secret': 'i_UZ6z9j-JXioCISF9AD928-YVfzfSmMeZL2bgtr701clccJ5oCmB-KKc99IUYfO'
         }
 
-    def getToken(self):
+    def get_token(self):
         """
         Get an  auth_token from API or token.txt
         """
@@ -59,22 +63,24 @@ class Zabbix_wechat:
 
         if not control:
             with open(self.token_file, 'w') as f:
-                url = '{0[getToken]}?corpid={0[corpid]}&corpsecret={0[secret]}'.format(self.apiUrl_dic)
+                url = '{0[get_token]}?corpid={0[corpid]}&corpsecret={0[secret]}'.format(self.apiUrl_dic)
                 result = json.loads(requests.get(url).content)
                 f.write(result['access_token'])
                 self.apiUrl_dic['token'] = result['access_token']
                 self.logger.info("Token_file not exist or timed out, now use token from Wechat_Api")
 
-    def senMessage(self, messages):
+    def get_department(self):
+        api_url = self.apiUrl_dic['getDepartment'] % self.apiUrl_dic['token']
+        print requests.get(api_url).text
+
+    def sen_message(self, messages1):
         url = '{0[sendMess]}?access_token={0[token]}'.format(self.apiUrl_dic)
         data = json.dumps({
             "safe":"0",
             "agentid": 1,
-            "touser": "@all",
-            "toparty": "@all",
-            "totag": "@all",
+            "toparty": "3",
             "msgtype": "text",
-            "text": {"content": messages}
+            "text": {"content": messages1}
         })
         result = json.loads(
             requests.post(url, data=data).content
@@ -82,7 +88,7 @@ class Zabbix_wechat:
 
         if result.get('errmsg') == 'ok':
             self.logger.info("Send ok!")
-        else :
+        else:
             self.logger.error("Send Error")
             self.logger.error(result.get('errmsg'))
 
@@ -91,6 +97,6 @@ if __name__ == '__main__':
         sys.exit(3)
 
     messages = sys.argv[1]
-    s = Zabbix_wechat()
-    s.getToken()
-    s.senMessage(messages)
+    s = ZabbixWechat()
+    s.get_token()
+
