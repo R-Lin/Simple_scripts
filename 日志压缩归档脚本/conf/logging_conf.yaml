@@ -1,0 +1,3 @@
+logging:
+  log_path: "../logs"
+  log_format: "%(asctime)s [%(levelname)s] %(message)s"
