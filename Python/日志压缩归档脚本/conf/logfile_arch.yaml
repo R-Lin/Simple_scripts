@@ -1,6 +1,5 @@
-# logfile_arch config
+﻿# logfile_arch config
 # arch_time: 归档日期(秒)
-# keep_time: 留存时间(秒)
 # dst_dir: 归档文件存放目录
 # project_list:
 #   - name: api
@@ -9,31 +8,16 @@
 #        keep_time: 85400 (Not necessary, default: 85400s)
 
 # 1 天 = 86400s
-arch_time: 2592000
-keep_time: 86400
+arch_time: 86400
 dst_dir: "D:\\arch"
 project_list:
-  - name: api
+  - name: project1
     paths:
-      - log_path: "D:\\Log\\log_bak\\api_iis\\*.log"
-  - name: appapi
+      - log_path: "D:\project1\\log\\Info\\*.log"
+      - log_path: "D:\\Log\\IIS\\project1\\W3SVC1\\*.log"
+      - log_path: "D:\\Web\\project1\\log\\Error\\*.log"
+      
+  - name: project2
     paths:
-      - log_path: "D:\\Log\\log_bak\\appapi_iis\\*.log"
-  - name: b2bapi
-    paths:
-      - log_path: "D:\\Log\\log_bak\\b2bapi_iis\\*.log"
-  - name: bdappapi
-    paths:
-      - log_path: "D:\\Log\\log_bak\\bdappapi_iis\\*.log"
-  - name: bussiness-api
-    paths:
-      - log_path: "D:\\Log\\log_bak\\bussiness-api_iis\\*.log"
-  - name: payapi+
-    paths:
-      - log_path: "D:\\Log\\log_bak\\payapi_iis\\*.log"
-  - name: tmapi
-    paths:
-      - log_path: "D:\\Log\\log_bak\\tmapi_iis\\*.log"
-  - name: umiii
-    paths:
-      - log_path: "D:\\Log\\log_bak\\umiii_iis\\*.log"
+      - log_path: "D:\\Web\\project2\\log\\Info\\*.log"
+      - log_path: "D:\\Web\\project2\\log\\Error\\*.log"
