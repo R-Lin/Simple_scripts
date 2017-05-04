@@ -31,35 +31,35 @@ if __name__ == '__main__':
     except yaml.parser.ParserError as error_messag:
         log.error(str(error_messag).replace('\n', ''))
         sys.exit()
-
-    logfile_keep_time_defalut = log_conf_dict['keep_time']
+       
     logfile_arch_time = log_conf_dict['arch_time']
     logfile_save_path = log_conf_dict['dst_dir']
     logfile_item_list = log_conf_dict['project_list']
     result_date_dic = {}
     project_name_dic = {}
 
-    # Build log tree dict
+    # 构建日志树字典
     for logfile_item in logfile_item_list:
         logfile_list = logfile_item['paths']
         project_name_dic[logfile_item['name']] = {}
         for logfile in logfile_list:
-            logfile_keep_time = logfile.get('keep_time', logfile_keep_time_defalut)
             log_path = logfile['log_path']
-
 
             log_file_dir = os.path.basename(os.path.dirname(log_path))
             log_files = glob.glob(log_path)
 
             if not log_files:
-                # no logfles
+                # 给定路径下无符合要求的文件
+                log.info('path: %s had no files' % logfile)
                 continue
 
-            for log_file_item in iter(log_files):
+            for log_file_item in iter(log_files):	
                 is_del = 0
                 file_ctimestamp = os.stat(log_file_item).st_mtime
                 time_suffix = strftime('%Y%m', localtime(file_ctimestamp))
                 reduce_value = now_timestamp - file_ctimestamp
+                
+                # 根据归档时间（arch_time）来判断日志是否要归档并删除
                 if reduce_value <= logfile_arch_time:
                     # keep one month logs
                     continue
@@ -75,12 +75,15 @@ if __name__ == '__main__':
 
                 # dirname and file suffix make up the defalutdict_key: api::log
                 defaultdict_key = '::'.join(dirname_file_suffix)
+                
                 if defaultdict_key not in project_name_dic[logfile_item['name']]:
                     # avoid the path is *, accoding the file to bulit defaultdict
                     project_name_dic[logfile_item['name']][defaultdict_key] = defaultdict(list)
+                   
+                # 记录需要删除的文件信息
                 project_name_dic[logfile_item['name']][defaultdict_key][time_suffix].append((is_del, log_file_item))
 
-    # Arch log
+    # 压缩日志
     for project_name in project_name_dic:
         for dirname_file_suffix in project_name_dic[project_name]:
             log_path_dir, file_suffix = dirname_file_suffix.split('::')
@@ -91,6 +94,7 @@ if __name__ == '__main__':
                 arch_logfile_target = os.path.join(dest_path, arch_logfile_name)
                 already_arch_file_list = []
                 if os.path.exists(arch_logfile_target):
+                    print arch_logfile_target
                     with zipfile.ZipFile(arch_logfile_target) as f_r:
                         already_arch_file_list = f_r.namelist()
                 with zipfile.ZipFile(arch_logfile_target, 'a', zipfile.ZIP_DEFLATED, allowZip64=True) as f:
@@ -101,7 +105,7 @@ if __name__ == '__main__':
                             f.write(log_file, os.path.basename(log_file))
                             log.info('%s has completed!' % log_file)
                         if del_flag:
-                            # add to delete_list
+                            # 将需要删除的文件追加到删除列表
                             delete_list.append(log_file)
 
                 log.info('%s all completed!' % arch_logfile_target)
